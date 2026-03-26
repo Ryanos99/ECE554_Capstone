@@ -20,11 +20,11 @@
 #   4. Exports in formats Holland needs for weight_bram_ctrl.v
 #
 # BRAM layout (single BRAM, addressed by layer + neuron + input):
-#   Layer 1: addr 0x0000 - 0x15FF  (44*128  = 5632  weights)
-#   Layer 2: addr 0x1600 - 0x35FF  (128*64  = 8192  weights)
-#   Output:  addr 0x3600 - 0x393F  (64*5    = 320   weights)
-#   Biases:  addr 0x3940 - 0x39FF  (128+64+5 = 197  biases)
-#   Total:                          14341 entries, fits in 16K BRAM
+#   Layer 1: 34*128  = 4,352 weights  (addr 0x0000 - 0x10FF)
+#   Layer 2: 128*64  = 8,192 weights  (addr 0x1100 - 0x30FF)
+#   Output:  64*3    =   192 weights  (addr 0x3100 - 0x31BF)
+#   Biases:  128+64+3=   195 biases   (addr 0x31C0 - 0x327E)
+#   Total:            12,931 entries
 
 import os
 import numpy as np
