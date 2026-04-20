@@ -33,11 +33,11 @@ module weight_bram_ctrl(
     );
 
     // BRAM layout (single BRAM, addressed by layer + neuron + input):
-    //   Layer 1: 34*128  = 4,352 weights  (addr 0x0000 - 0x10FF)
-    //   Layer 2: 128*64  = 8,192 weights  (addr 0x1100 - 0x30FF)
-    //   Output:  64*3    =   192 weights  (addr 0x3100 - 0x31BF)
-    //   Biases:  128+64+3=   195 biases   (addr 0x31C0 - 0x3283)
-    //   Total:            12,931 entries
+    //   Layer 1: 36*128  = 4,608 weights  (addr 0x0000 - 0x11FF)
+    //   Layer 2: 128*64  = 8,192 weights  (addr 0x1200 - 0x31FF)
+    //   Output:  64*3    =   192 weights  (addr 0x3200 - 0x32BF)
+    //   Biases:  128+64+3=   195 biases   (addr 0x32C0 - 0x3383)
+    //   Total:             13,187 entries
     logic [13:0] address;
     logic [13:0] layer_base;
     logic [12:0] neuron_base;
@@ -46,13 +46,13 @@ module weight_bram_ctrl(
 
     // Depending on the layer create a base number where the address will start
     assign layer_base = (layer_sel == 2'b00) ? 14'b00_0000_0000_0000                                                  // Layer 1
-                                             : (layer_sel == 2'b01) ? 14'b01_0001_0000_0000                           // Layer 2
-                                                                    : (layer_sel == 2'b10) ? 14'b11_0001_0000_0000    // Output
-                                                                                           : 14'b11_0001_1100_0000;   // Bias
+                                             : (layer_sel == 2'b01) ? 14'b01_0010_0000_0000                           // Layer 2
+                                                                    : (layer_sel == 2'b10) ? 14'b11_0010_0000_0000    // Output
+                                                                                           : 14'b11_0010_1100_0000;   // Bias
 
     // Depending on which neuron create another base number where the address will add to the layer base
     // each neuron has as many weights as there are inputs so also depends on which layer
-    assign neuron_base = (layer_sel == 2'b00) ? (neuron * 34)                                               // 44 inputs 128 neurons
+    assign neuron_base = (layer_sel == 2'b00) ? (neuron * 36)                                               // 36 inputs 128 neurons
                                               : (layer_sel == 2'b01) ? (neuron * 128)                       // 128 inputs 64 neurons
                                                                      : (layer_sel == 2'b10) ? (neuron * 64) // 64 inputs 5 neurons
                                                                                             : 13'd0;        // When biasing there is not neurons
