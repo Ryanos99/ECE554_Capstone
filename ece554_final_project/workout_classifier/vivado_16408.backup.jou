@@ -1,0 +1,175 @@
+#-----------------------------------------------------------
+# Vivado v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Mon Apr 20 18:22:45 2026
+# Process ID         : 16408
+# Current directory  : Z:/ece554_final_project/workout_classifier
+# Command line       : vivado.exe -gui_launcher_event rodinguilauncherevent9076 Z:\ece554_final_project\workout_classifier\workout_classifier.xpr
+# Log file           : Z:/ece554_final_project/workout_classifier/vivado.log
+# Journal file       : Z:/ece554_final_project/workout_classifier\vivado.jou
+# Running On         : Madis_ThinkPad
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26200
+# Processor Detail   : 13th Gen Intel(R) Core(TM) i7-1360P
+# CPU Frequency      : 2611 MHz
+# CPU Physical cores : 12
+# CPU Logical cores  : 16
+# Host memory        : 16836 MB
+# Swap memory        : 24696 MB
+# Total Virtual      : 41532 MB
+# Available Virtual  : 21898 MB
+#-----------------------------------------------------------
+start_gui
+open_project Z:/ece554_final_project/workout_classifier/workout_classifier.xpr
+create_peripheral xilinx.com user mlp_controller 1.0 -dir Z:/ece554_final_project/ip_repo
+add_peripheral_interface S00_AXI -interface_mode slave -axi_type lite [ipx::find_open_core xilinx.com:user:mlp_controller:1.0]
+set_property VALUE 64 [ipx::get_bus_parameters WIZ_NUM_REG -of_objects [ipx::get_bus_interfaces S00_AXI -of_objects [ipx::find_open_core xilinx.com:user:mlp_controller:1.0]]]
+generate_peripheral -driver -bfm_example_design -debug_hw_example_design [ipx::find_open_core xilinx.com:user:mlp_controller:1.0]
+write_peripheral [ipx::find_open_core xilinx.com:user:mlp_controller:1.0]
+set_property  ip_repo_paths  Z:/ece554_final_project/ip_repo/mlp_controller_1_0 [current_project]
+update_ip_catalog -rebuild
+ipx::edit_ip_in_project -upgrade true -name edit_mlp_controller_v1_0 -directory Z:/ece554_final_project/ip_repo z:/ece554_final_project/ip_repo/mlp_controller_1_0/component.xml
+update_compile_order -fileset sources_1
+add_files -norecurse -copy_to z:/ece554_final_project/ip_repo/mlp_controller_1_0/src {Z:/ece554_final_project/ip_repo/mlp_classifier.sv Z:/ece554_final_project/ip_repo/weight_bram_ctrl.sv Z:/ece554_final_project/ip_repo/mac.sv}
+update_compile_order -fileset sources_1
+create_ip -name blk_mem_gen -vendor xilinx.com -library ip -version 8.4 -module_name blk_mem_gen_0 -dir z:/ece554_final_project/ip_repo/mlp_controller_1_0/src
+set_property -dict [list \
+  CONFIG.Coe_File {z:/ece554_final_project/ip_repo/mlp_controller_1_0/src/mock_weights.coe} \
+  CONFIG.Load_Init_File {true} \
+  CONFIG.Memory_Type {Single_Port_ROM} \
+  CONFIG.Write_Depth_A {13187} \
+  CONFIG.Write_Width_A {8} \
+] [get_ips blk_mem_gen_0]
+generate_target {instantiation_template} [get_files z:/ece554_final_project/ip_repo/mlp_controller_1_0/src/blk_mem_gen_0/blk_mem_gen_0.xci]
+generate_target all [get_files  z:/ece554_final_project/ip_repo/mlp_controller_1_0/src/blk_mem_gen_0/blk_mem_gen_0.xci]
+catch { config_ip_cache -export [get_ips -all blk_mem_gen_0] }
+export_ip_user_files -of_objects [get_files z:/ece554_final_project/ip_repo/mlp_controller_1_0/src/blk_mem_gen_0/blk_mem_gen_0.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] z:/ece554_final_project/ip_repo/mlp_controller_1_0/src/blk_mem_gen_0/blk_mem_gen_0.xci]
+launch_runs blk_mem_gen_0_synth_1 -jobs 8
+wait_on_run blk_mem_gen_0_synth_1
+export_simulation -lib_map_path [list {modelsim=z:/ece554_final_project/ip_repo/edit_mlp_controller_v1_0.cache/compile_simlib/modelsim} {questa=z:/ece554_final_project/ip_repo/edit_mlp_controller_v1_0.cache/compile_simlib/questa} {riviera=z:/ece554_final_project/ip_repo/edit_mlp_controller_v1_0.cache/compile_simlib/riviera} {activehdl=z:/ece554_final_project/ip_repo/edit_mlp_controller_v1_0.cache/compile_simlib/activehdl}] -of_objects [get_files z:/ece554_final_project/ip_repo/mlp_controller_1_0/src/blk_mem_gen_0/blk_mem_gen_0.xci] -directory z:/ece554_final_project/ip_repo/edit_mlp_controller_v1_0.ip_user_files/sim_scripts -ip_user_files_dir z:/ece554_final_project/ip_repo/edit_mlp_controller_v1_0.ip_user_files -ipstatic_source_dir z:/ece554_final_project/ip_repo/edit_mlp_controller_v1_0.ip_user_files/ipstatic -use_ip_compiled_libs -force -quiet
+update_compile_order -fileset sources_1
+create_ip -name dsp_macro -vendor xilinx.com -library ip -version 1.0 -module_name dsp_macro_0 -dir z:/ece554_final_project/ip_repo/mlp_controller_1_0/src
+set_property -dict [list \
+  CONFIG.a_binarywidth {0} \
+  CONFIG.a_width {8} \
+  CONFIG.b_binarywidth {0} \
+  CONFIG.b_width {8} \
+  CONFIG.c_binarywidth {0} \
+  CONFIG.c_width {20} \
+  CONFIG.p_binarywidth {0} \
+  CONFIG.p_full_width {21} \
+  CONFIG.p_width {21} \
+] [get_ips dsp_macro_0]
+generate_target {instantiation_template} [get_files z:/ece554_final_project/ip_repo/mlp_controller_1_0/src/dsp_macro_0/dsp_macro_0.xci]
+generate_target all [get_files  z:/ece554_final_project/ip_repo/mlp_controller_1_0/src/dsp_macro_0/dsp_macro_0.xci]
+catch { config_ip_cache -export [get_ips -all dsp_macro_0] }
+export_ip_user_files -of_objects [get_files z:/ece554_final_project/ip_repo/mlp_controller_1_0/src/dsp_macro_0/dsp_macro_0.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] z:/ece554_final_project/ip_repo/mlp_controller_1_0/src/dsp_macro_0/dsp_macro_0.xci]
+launch_runs dsp_macro_0_synth_1 -jobs 8
+wait_on_run dsp_macro_0_synth_1
+export_simulation -lib_map_path [list {modelsim=z:/ece554_final_project/ip_repo/edit_mlp_controller_v1_0.cache/compile_simlib/modelsim} {questa=z:/ece554_final_project/ip_repo/edit_mlp_controller_v1_0.cache/compile_simlib/questa} {riviera=z:/ece554_final_project/ip_repo/edit_mlp_controller_v1_0.cache/compile_simlib/riviera} {activehdl=z:/ece554_final_project/ip_repo/edit_mlp_controller_v1_0.cache/compile_simlib/activehdl}] -of_objects [get_files z:/ece554_final_project/ip_repo/mlp_controller_1_0/src/dsp_macro_0/dsp_macro_0.xci] -directory z:/ece554_final_project/ip_repo/edit_mlp_controller_v1_0.ip_user_files/sim_scripts -ip_user_files_dir z:/ece554_final_project/ip_repo/edit_mlp_controller_v1_0.ip_user_files -ipstatic_source_dir z:/ece554_final_project/ip_repo/edit_mlp_controller_v1_0.ip_user_files/ipstatic -use_ip_compiled_libs -force -quiet
+update_compile_order -fileset sources_1
+ipx::merge_project_changes files [ipx::current_core]
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+set_property core_revision 2 [ipx::current_core]
+ipx::update_source_project_archive -component [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::check_integrity [ipx::current_core]
+ipx::save_core [ipx::current_core]
+ipx::move_temp_component_back -component [ipx::current_core]
+close_project -delete
+update_ip_catalog -rebuild -repo_path z:/ece554_final_project/ip_repo/mlp_controller_1_0
+create_bd_design "workout_classifier"
+update_compile_order -fileset sources_1
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:zynq_ultra_ps_e:3.5 zynq_ultra_ps_e_0
+endgroup
+create_bd_cell -type ip -vlnv xilinx.com:user:mlp_controller:1.0 mlp_controller_0
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {Auto} Clk_slave {Auto} Clk_xbar {Auto} Master {/zynq_ultra_ps_e_0/M_AXI_HPM0_LPD} Slave {/mlp_controller_0/S00_AXI} ddr_seg {Auto} intc_ip {New AXI SmartConnect} master_apm {0}}  [get_bd_intf_pins mlp_controller_0/S00_AXI]
+validate_bd_design
+make_wrapper -files [get_files Z:/ece554_final_project/workout_classifier/workout_classifier.srcs/sources_1/bd/workout_classifier/workout_classifier.bd] -top
+add_files -norecurse z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/hdl/workout_classifier_wrapper.v
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+ipx::edit_ip_in_project -upgrade true -name mlp_controller_v1_0_project -directory Z:/ece554_final_project/workout_classifier/workout_classifier.tmp/mlp_controller_v1_0_project z:/ece554_final_project/ip_repo/mlp_controller_1_0/component.xml
+update_compile_order -fileset sources_1
+create_ip -name blk_mem_gen -vendor xilinx.com -library ip -version 8.4 -module_name blk_mem_gen_0 -dir z:/ece554_final_project/ip_repo/mlp_controller_1_0/src
+set_property -dict [list \
+  CONFIG.Coe_File {z:/ece554_final_project/ip_repo/mlp_controller_1_0/src/mock_weights.coe} \
+  CONFIG.Load_Init_File {true} \
+  CONFIG.Memory_Type {Single_Port_ROM} \
+  CONFIG.Write_Depth_A {13187} \
+  CONFIG.Write_Width_A {8} \
+] [get_ips blk_mem_gen_0]
+generate_target {instantiation_template} [get_files z:/ece554_final_project/ip_repo/mlp_controller_1_0/src/blk_mem_gen_0_1/blk_mem_gen_0.xci]
+update_compile_order -fileset sources_1
+generate_target all [get_files  z:/ece554_final_project/ip_repo/mlp_controller_1_0/src/blk_mem_gen_0_1/blk_mem_gen_0.xci]
+catch { config_ip_cache -export [get_ips -all blk_mem_gen_0] }
+export_ip_user_files -of_objects [get_files z:/ece554_final_project/ip_repo/mlp_controller_1_0/src/blk_mem_gen_0_1/blk_mem_gen_0.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] z:/ece554_final_project/ip_repo/mlp_controller_1_0/src/blk_mem_gen_0_1/blk_mem_gen_0.xci]
+launch_runs blk_mem_gen_0_synth_1 -jobs 8
+wait_on_run blk_mem_gen_0_synth_1
+export_simulation -lib_map_path [list {modelsim=z:/ece554_final_project/workout_classifier/workout_classifier.tmp/mlp_controller_v1_0_project/mlp_controller_v1_0_project.cache/compile_simlib/modelsim} {questa=z:/ece554_final_project/workout_classifier/workout_classifier.tmp/mlp_controller_v1_0_project/mlp_controller_v1_0_project.cache/compile_simlib/questa} {riviera=z:/ece554_final_project/workout_classifier/workout_classifier.tmp/mlp_controller_v1_0_project/mlp_controller_v1_0_project.cache/compile_simlib/riviera} {activehdl=z:/ece554_final_project/workout_classifier/workout_classifier.tmp/mlp_controller_v1_0_project/mlp_controller_v1_0_project.cache/compile_simlib/activehdl}] -of_objects [get_files z:/ece554_final_project/ip_repo/mlp_controller_1_0/src/blk_mem_gen_0_1/blk_mem_gen_0.xci] -directory z:/ece554_final_project/workout_classifier/workout_classifier.tmp/mlp_controller_v1_0_project/mlp_controller_v1_0_project.ip_user_files/sim_scripts -ip_user_files_dir z:/ece554_final_project/workout_classifier/workout_classifier.tmp/mlp_controller_v1_0_project/mlp_controller_v1_0_project.ip_user_files -ipstatic_source_dir z:/ece554_final_project/workout_classifier/workout_classifier.tmp/mlp_controller_v1_0_project/mlp_controller_v1_0_project.ip_user_files/ipstatic -use_ip_compiled_libs -force -quiet
+create_ip -name dsp_macro -vendor xilinx.com -library ip -version 1.0 -module_name dsp_macro_0 -dir z:/ece554_final_project/ip_repo/mlp_controller_1_0/src
+set_property -dict [list \
+  CONFIG.a_binarywidth {0} \
+  CONFIG.a_width {8} \
+  CONFIG.b_binarywidth {0} \
+  CONFIG.b_width {8} \
+  CONFIG.c_binarywidth {0} \
+  CONFIG.c_width {20} \
+  CONFIG.p_binarywidth {0} \
+  CONFIG.p_full_width {21} \
+  CONFIG.p_width {21} \
+] [get_ips dsp_macro_0]
+generate_target {instantiation_template} [get_files z:/ece554_final_project/ip_repo/mlp_controller_1_0/src/dsp_macro_0_1/dsp_macro_0.xci]
+update_compile_order -fileset sources_1
+ipx::merge_project_changes files [ipx::current_core]
+generate_target all [get_files  z:/ece554_final_project/ip_repo/mlp_controller_1_0/src/dsp_macro_0_1/dsp_macro_0.xci]
+catch { config_ip_cache -export [get_ips -all dsp_macro_0] }
+export_ip_user_files -of_objects [get_files z:/ece554_final_project/ip_repo/mlp_controller_1_0/src/dsp_macro_0_1/dsp_macro_0.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] z:/ece554_final_project/ip_repo/mlp_controller_1_0/src/dsp_macro_0_1/dsp_macro_0.xci]
+launch_runs dsp_macro_0_synth_1 -jobs 8
+wait_on_run dsp_macro_0_synth_1
+export_simulation -lib_map_path [list {modelsim=z:/ece554_final_project/workout_classifier/workout_classifier.tmp/mlp_controller_v1_0_project/mlp_controller_v1_0_project.cache/compile_simlib/modelsim} {questa=z:/ece554_final_project/workout_classifier/workout_classifier.tmp/mlp_controller_v1_0_project/mlp_controller_v1_0_project.cache/compile_simlib/questa} {riviera=z:/ece554_final_project/workout_classifier/workout_classifier.tmp/mlp_controller_v1_0_project/mlp_controller_v1_0_project.cache/compile_simlib/riviera} {activehdl=z:/ece554_final_project/workout_classifier/workout_classifier.tmp/mlp_controller_v1_0_project/mlp_controller_v1_0_project.cache/compile_simlib/activehdl}] -of_objects [get_files z:/ece554_final_project/ip_repo/mlp_controller_1_0/src/dsp_macro_0_1/dsp_macro_0.xci] -directory z:/ece554_final_project/workout_classifier/workout_classifier.tmp/mlp_controller_v1_0_project/mlp_controller_v1_0_project.ip_user_files/sim_scripts -ip_user_files_dir z:/ece554_final_project/workout_classifier/workout_classifier.tmp/mlp_controller_v1_0_project/mlp_controller_v1_0_project.ip_user_files -ipstatic_source_dir z:/ece554_final_project/workout_classifier/workout_classifier.tmp/mlp_controller_v1_0_project/mlp_controller_v1_0_project.ip_user_files/ipstatic -use_ip_compiled_libs -force -quiet
+set_property core_revision 3 [ipx::current_core]
+ipx::update_source_project_archive -component [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::check_integrity [ipx::current_core]
+ipx::save_core [ipx::current_core]
+ipx::move_temp_component_back -component [ipx::current_core]
+close_project -delete
+update_ip_catalog -rebuild -repo_path z:/ece554_final_project/ip_repo/mlp_controller_1_0
+delete_bd_objs [get_bd_intf_nets axi_smc_M00_AXI] [get_bd_cells mlp_controller_0]
+create_bd_cell -type ip -vlnv xilinx.com:user:mlp_controller:1.0 mlp_controller_0
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/zynq_ultra_ps_e_0/pl_clk0 (96 MHz)} Clk_slave {Auto} Clk_xbar {/zynq_ultra_ps_e_0/pl_clk0 (96 MHz)} Master {/zynq_ultra_ps_e_0/M_AXI_HPM0_LPD} Slave {/mlp_controller_0/S00_AXI} ddr_seg {Auto} intc_ip {/axi_smc} master_apm {0}}  [get_bd_intf_pins mlp_controller_0/S00_AXI]
+set_property location {2 721 580} [get_bd_cells mlp_controller_0]
+validate_bd_design
+save_bd_design
+reset_run workout_classifier_axi_smc_0_synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+launch_runs impl_1 -jobs 8
+wait_on_run impl_1
+ipx::edit_ip_in_project -upgrade true -name mlp_controller_v1_0_project -directory Z:/ece554_final_project/workout_classifier/workout_classifier.tmp/mlp_controller_v1_0_project z:/ece554_final_project/ip_repo/mlp_controller_1_0/component.xml
+update_compile_order -fileset sources_1
+ipx::merge_project_changes files [ipx::current_core]
+set_property core_revision 4 [ipx::current_core]
+ipx::update_source_project_archive -component [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::check_integrity [ipx::current_core]
+ipx::save_core [ipx::current_core]
+ipx::move_temp_component_back -component [ipx::current_core]
+close_project -delete
