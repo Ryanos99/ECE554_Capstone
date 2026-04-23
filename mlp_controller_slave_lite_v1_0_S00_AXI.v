@@ -83,7 +83,7 @@
 
 	
 	// MLP classifier
-    wire [287:0]    movenet_data;         // Movenet points from dpu
+    wire [271:0]    movenet_data;         // Movenet points from dpu
     reg             movenet_data_valid;   // Movenet points valid
     wire [1:0]      pose_class;           // 00: Push-Up, 01: Squat, 10: Curl, 11: No pose
     wire            done_pulse;           // High when inference finishes
@@ -307,8 +307,8 @@
 	      slv_reg33 <= 0;
 	      slv_reg34 <= 0;
 	      slv_reg35 <= 0;
-	      slv_reg36 <= 0;
-	      slv_reg37 <= 0;
+	      //slv_reg36 <= 0;
+	      //slv_reg37 <= 0;
 	      slv_reg38 <= 0;
 	      slv_reg39 <= 0;
 	      slv_reg40 <= 0;
@@ -597,14 +597,14 @@
 	              if ( S_AXI_WSTRB[byte_index] == 1 ) begin
 	                // Respective byte enables are asserted as per write strobes 
 	                // Slave register 36
-	                slv_reg36[(byte_index*8) +: 8] <= S_AXI_WDATA[(byte_index*8) +: 8];
+	                //slv_reg36[(byte_index*8) +: 8] <= S_AXI_WDATA[(byte_index*8) +: 8];
 	              end  
 	          6'h25:
 	            for ( byte_index = 0; byte_index <= (C_S_AXI_DATA_WIDTH/8)-1; byte_index = byte_index+1 )
 	              if ( S_AXI_WSTRB[byte_index] == 1 ) begin
 	                // Respective byte enables are asserted as per write strobes 
 	                // Slave register 37
-	                slv_reg37[(byte_index*8) +: 8] <= S_AXI_WDATA[(byte_index*8) +: 8];
+	                //slv_reg37[(byte_index*8) +: 8] <= S_AXI_WDATA[(byte_index*8) +: 8];
 	              end  
 	          6'h26:
 	            for ( byte_index = 0; byte_index <= (C_S_AXI_DATA_WIDTH/8)-1; byte_index = byte_index+1 )
@@ -825,8 +825,8 @@
 	                      slv_reg33 <= slv_reg33;
 	                      slv_reg34 <= slv_reg34;
 	                      slv_reg35 <= slv_reg35;
-	                      slv_reg36 <= slv_reg36;
-	                      slv_reg37 <= slv_reg37;
+	                      //slv_reg36 <= slv_reg36;
+	                      //slv_reg37 <= slv_reg37;
 	                      slv_reg38 <= slv_reg38;
 	                      slv_reg39 <= slv_reg39;
 	                      slv_reg40 <= slv_reg40;
@@ -910,10 +910,6 @@
 	  assign S_AXI_RDATA = (axi_araddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB] == 6'h0) ? slv_reg0 : (axi_araddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB] == 6'h1) ? slv_reg1 : (axi_araddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB] == 6'h2) ? slv_reg2 : (axi_araddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB] == 6'h3) ? slv_reg3 : (axi_araddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB] == 6'h4) ? slv_reg4 : (axi_araddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB] == 6'h5) ? slv_reg5 : (axi_araddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB] == 6'h6) ? slv_reg6 : (axi_araddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB] == 6'h7) ? slv_reg7 : (axi_araddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB] == 6'h8) ? slv_reg8 : (axi_araddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB] == 6'h9) ? slv_reg9 : (axi_araddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB] == 6'hA) ? slv_reg10 : (axi_araddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB] == 6'hB) ? slv_reg11 : (axi_araddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB] == 6'hC) ? slv_reg12 : (axi_araddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB] == 6'hD) ? slv_reg13 : (axi_araddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB] == 6'hE) ? slv_reg14 : (axi_araddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB] == 6'hF) ? slv_reg15 : (axi_araddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB] == 6'h10) ? slv_reg16 : (axi_araddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB] == 6'h11) ? slv_reg17 : (axi_araddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB] == 6'h12) ? slv_reg18 : (axi_araddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB] == 6'h13) ? slv_reg19 : (axi_araddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB] == 6'h14) ? slv_reg20 : (axi_araddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB] == 6'h15) ? slv_reg21 : (axi_araddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB] == 6'h16) ? slv_reg22 : (axi_araddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB] == 6'h17) ? slv_reg23 : (axi_araddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB] == 6'h18) ? slv_reg24 : (axi_araddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB] == 6'h19) ? slv_reg25 : (axi_araddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB] == 6'h1A) ? slv_reg26 : (axi_araddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB] == 6'h1B) ? slv_reg27 : (axi_araddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB] == 6'h1C) ? slv_reg28 : (axi_araddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB] == 6'h1D) ? slv_reg29 : (axi_araddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB] == 6'h1E) ? slv_reg30 : (axi_araddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB] == 6'h1F) ? slv_reg31 : (axi_araddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB] == 6'h20) ? slv_reg32 : (axi_araddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB] == 6'h21) ? slv_reg33 : (axi_araddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB] == 6'h22) ? slv_reg34 : (axi_araddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB] == 6'h23) ? slv_reg35 : (axi_araddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB] == 6'h24) ? slv_reg36 : (axi_araddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB] == 6'h25) ? slv_reg37 : (axi_araddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB] == 6'h26) ? slv_reg38 : (axi_araddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB] == 6'h27) ? slv_reg39 : (axi_araddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB] == 6'h28) ? slv_reg40 : (axi_araddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB] == 6'h29) ? slv_reg41 : (axi_araddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB] == 6'h2A) ? slv_reg42 : (axi_araddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB] == 6'h2B) ? slv_reg43 : (axi_araddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB] == 6'h2C) ? slv_reg44 : (axi_araddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB] == 6'h2D) ? slv_reg45 : (axi_araddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB] == 6'h2E) ? slv_reg46 : (axi_araddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB] == 6'h2F) ? slv_reg47 : (axi_araddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB] == 6'h30) ? slv_reg48 : (axi_araddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB] == 6'h31) ? slv_reg49 : (axi_araddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB] == 6'h32) ? slv_reg50 : (axi_araddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB] == 6'h33) ? slv_reg51 : (axi_araddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB] == 6'h34) ? slv_reg52 : (axi_araddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB] == 6'h35) ? slv_reg53 : (axi_araddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB] == 6'h36) ? slv_reg54 : (axi_araddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB] == 6'h37) ? slv_reg55 : (axi_araddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB] == 6'h38) ? slv_reg56 : (axi_araddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB] == 6'h39) ? slv_reg57 : (axi_araddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB] == 6'h3A) ? slv_reg58 : (axi_araddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB] == 6'h3B) ? slv_reg59 : (axi_araddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB] == 6'h3C) ? slv_reg60 : (axi_araddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB] == 6'h3D) ? slv_reg61 : (axi_araddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB] == 6'h3E) ? slv_reg62 : (axi_araddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB] == 6'h3F) ? slv_reg63 : 0; 
 	// Add user logic here
 	assign movenet_data = {
-		slv_reg38[7:0],
-		slv_reg37[7:0],
-		slv_reg36[7:0],
-		slv_reg35[7:0],
 		slv_reg34[7:0],
 		slv_reg33[7:0],
 		slv_reg32[7:0],
@@ -952,22 +948,28 @@
 	always @(posedge S_AXI_ACLK) begin
 	  	if (!S_AXI_ARESETN)
 	  	  	movenet_data_valid <= 0;
-	  	else if (slv_reg0[0])   // start bit
+	  	else if (slv_reg35[0])   // start bit
 	  	  	movenet_data_valid <= 1;
 	  	else
 	  	  	movenet_data_valid <= 0;
 	end
 
+	//Need to hold the done pulse until its read
+	reg [1:0] done_pulse_count;
+
 	always @(posedge S_AXI_ACLK) begin
   		if (!S_AXI_ARESETN) begin
-  		  	slv_reg39 <= 32'd0;
-			slv_reg40 <= 32'd0;
+			done_pulse_count <= 2'd0;
+  		  	slv_reg36 <= 32'd0;
+			slv_reg37 <= 32'd0;
   		end else if (done_pulse) begin
-  		  	slv_reg39 <= done_pulse;
-  		  	slv_reg40 <= pose_class; 
-		end else begin
-			slv_reg39 <= slv_reg39;
-			slv_reg40 <= slv_reg40;
+  		  	slv_reg36 <= 32'd1;
+  		  	slv_reg37 <= pose_class; 
+		// PS needs to write to done pulse reg to clear it otherwise we dont know how long to hold it
+		end else if (axi_wready && S_AXI_WVALID && axi_awready && S_AXI_AWVALID &&
+                     axi_awaddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB] == 6'h24) begin
+			slv_reg36 <= 32'd0;
+			slv_reg37 <= slv_reg37;
 		end
 	end
 

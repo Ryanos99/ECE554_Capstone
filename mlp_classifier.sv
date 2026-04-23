@@ -23,7 +23,7 @@
 module mlp_classifier(
         input  logic             clk, 
         input  logic             rst_n,
-        input  logic [287:0]     movenet_data,         // Movenet points from dpu
+        input  logic [271:0]     movenet_data,         // Movenet points
         input  logic             movenet_data_valid,   // Movenet points valid
         output logic [1:0]       pose_class,           // 00: Push-Up, 01: Squat, 10: Curl, 11: No pose
         output logic             done_pulse  // High when inference finishes
@@ -69,7 +69,7 @@ module mlp_classifier(
 
     logic       rst_layer1_input_cnt;
     logic       mac1_next_input;
-    logic [7:0] layer1_input_count;         // 36 inputs
+    logic [7:0] layer1_input_count;         // 34 inputs
     
     logic       rst_layer2_neuron_cnt;
     logic [7:0] layer2_neuron_count;        // 64 neurons
@@ -91,7 +91,7 @@ module mlp_classifier(
     logic [20:0] pose_class_outputs [2:0];
 
     // Intermediate signals to store into larger outputs
-    logic [7:0]  current_layer1_weights [35:0];
+    logic [7:0]  current_layer1_weights [33:0];
     logic [7:0]  current_layer1_bias;
     logic [20:0] current_layer1_mac_out;
 
@@ -149,7 +149,7 @@ module mlp_classifier(
     // Flop the mac out to the final output signal
     always_ff @(posedge clk) begin
         layer1_outputs[layer1_neuron_count] <= (~rst_n | (state == IDLE)) ? 21'd0
-                                                                          : (layer1_input_count == 7'd35) & valid_mac_out & (state == LAYER1_WAIT_MAC) ? (acc_out > 0) ? acc_out
+                                                                          : (layer1_input_count == 7'd33) & valid_mac_out & (state == LAYER1_WAIT_MAC) ? (acc_out > 0) ? acc_out
                                                                                                                                                                        : 21'd0
                                                                                                                                                        : layer1_outputs[layer1_neuron_count];
     end
@@ -259,8 +259,8 @@ module mlp_classifier(
 
                 current_layer1_weights[layer1_input_count] = weight_data;
 
-                next_state = (layer1_input_count == 7'd35) & weight_data_valid ? LAYER1_MAC : LAYER1_INPUTS;
-                rst_layer1_input_cnt = (layer1_input_count == 7'd35) & weight_data_valid;
+                next_state = (layer1_input_count == 7'd33) & weight_data_valid ? LAYER1_MAC : LAYER1_INPUTS;
+                rst_layer1_input_cnt = (layer1_input_count == 7'd33) & weight_data_valid;
             end
 
             LAYER1_MAC: begin
@@ -371,12 +371,6 @@ module mlp_classifier(
                     8'd33: begin 
                         point    = movenet_data[271:264];
                     end
-                    8'd34: begin 
-                        point    = movenet_data[279:272];
-                    end
-                    8'd35: begin 
-                        point    = movenet_data[287:280];
-                    end
                 endcase
 
                 weight           = current_layer1_weights[layer1_input_count];
@@ -390,10 +384,10 @@ module mlp_classifier(
                 //layer1_outputs[layer1_neuron_count] = (layer1_input_count == 7'd35) & valid_mac_out ? acc_out : 8'd0;
                 //current_layer1_mac_out = valid_mac_out ? acc_out : 21'd0;
 
-                mac1_next_input = ~(layer1_input_count == 7'd35) & valid_mac_out;
-                rst_layer1_input_cnt = (layer1_input_count == 7'd35) & valid_mac_out;
-                next_state = (layer1_input_count == 7'd35) & valid_mac_out ? LAYER1_NEURON
-                                                                           : (layer1_input_count != 7'd35) & valid_mac_out ? LAYER1_MAC
+                mac1_next_input = ~(layer1_input_count == 7'd33) & valid_mac_out;
+                rst_layer1_input_cnt = (layer1_input_count == 7'd33) & valid_mac_out;
+                next_state = (layer1_input_count == 7'd33) & valid_mac_out ? LAYER1_NEURON
+                                                                           : (layer1_input_count != 7'd33) & valid_mac_out ? LAYER1_MAC
                                                                                                                            : LAYER1_WAIT_MAC;
             end
             
