@@ -3,6 +3,10 @@ Sources
 
 Taken from https://stackoverflow.com/questions/67421759/equivalent-function-to-input-in-opencv-python
 
+https://github.com/Xilinx/AUP-ZU3/blob/main/base/notebooks/video/opencv_face_detect_webcam.ipynb
+https://github.com/Xilinx/PYNQ/blob/master/pynq/notebooks/arch/aarch64/common/display_port_introduction.ipynb
+https://pynq.readthedocs.io/en/v2.0/pynq_package/pynq.lib/pynq.lib.button.html
+
 """
 
 
@@ -103,6 +107,7 @@ while True:
         is_recording = False
 
     if (not(is_typing) and key == ord('q')):
+        # Exiting....
         print("STATS...")
         for element in previous_stats:
             print(element.to_string())
@@ -120,6 +125,7 @@ while True:
         elif chr(key) in string.printable:
             text += chr(key)
 
+    # FIXME: Instead of adding this to the while loop, can it be added to draw_display?
     initial_x = 0
     initial_y = 160
     x_size = 300
@@ -132,3 +138,22 @@ while True:
         cv2.putText(frame, f"Current best in {CLASS_NAMES.get(str(i), 'unknown')}: " + (f"{exercise_max[i][0]} with {exercise_max[i][1]}" if exercise_max[i] is not None else 'N/A'),
                     (initial_x + 10, initial_y + (i + 2) * 40), 
                     cv2.FONT_HERSHEY_SIMPLEX, 1.0, (255, 255, 255), 2)
+
+        
+
+# Displayport Code
+
+from pynq.lib.video import *
+
+displayport = DisplayPort()
+displayport.configure(VideoMode(1920, 1080, 24), PIXEL_RGB)
+
+### Add the following to the while True loop
+dp_frame = displayport.newframe()
+to_dp_frame = cv2.cvtColor(cv2.resize(frame, (1920, 1080)), cv2.COLOR_BGR2RGB)
+dp_frame[:] = to_dp_frame
+displayport.writeframe(dp_frame)
+
+
+# At the end
+displayport.close()
