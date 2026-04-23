@@ -21,9 +21,9 @@
 
 
 module mlp_controller_tb();
-    parameter NUM_KP      = 18;    // MoveNet keypoints
+    parameter NUM_KP      = 17;    // MoveNet keypoints
     parameter INPUT_WIDTH = 8;     // bits per keypoint value (x or y)
-    parameter NUM_INPUTS  = 36;    // 18 keypoints * 2 (x + y)
+    parameter NUM_INPUTS  = 34;    // 17 keypoints * 2 (x + y)
 
     // Initialize frames
     localparam NUM_FRAMES = 14;
@@ -96,7 +96,6 @@ module mlp_controller_tb();
             8'd162, 8'd154,
             8'd162, 8'd138,
             8'd220, 8'd153,
-            8'd212, 8'd142,
             8'd212, 8'd142
         };
 
@@ -117,7 +116,6 @@ module mlp_controller_tb();
             8'd165, 8'd150,
             8'd161, 8'd133,
             8'd220, 8'd153,
-            8'd212, 8'd143,
             8'd212, 8'd143
         };
 
@@ -138,7 +136,6 @@ module mlp_controller_tb();
             8'd160, 8'd137,
             8'd158, 8'd129,
             8'd217, 8'd152,
-            8'd213, 8'd143,
             8'd213, 8'd143
         };
 
@@ -159,7 +156,6 @@ module mlp_controller_tb();
             8'd172, 8'd99,
             8'd168, 8'd99,
             8'd222, 8'd147,
-            8'd216, 8'd143,
             8'd216, 8'd143
         };
 
@@ -180,7 +176,6 @@ module mlp_controller_tb();
             8'd176, 8'd100,
             8'd173, 8'd97,
             8'd224, 8'd150,
-            8'd216, 8'd143,
             8'd216, 8'd143
         };
 
@@ -201,7 +196,6 @@ module mlp_controller_tb();
             8'd172, 8'd100,
             8'd168, 8'd106,
             8'd224, 8'd148,
-            8'd214, 8'd144,
             8'd214, 8'd144
         };
 
@@ -222,7 +216,6 @@ module mlp_controller_tb();
             8'd162, 8'd143,
             8'd159, 8'd133,
             8'd223, 8'd153,
-            8'd213, 8'd143,
             8'd213, 8'd143
         };
 
@@ -243,7 +236,6 @@ module mlp_controller_tb();
             8'd168, 8'd155,
             8'd165, 8'd142,
             8'd219, 8'd154,
-            8'd212, 8'd142,
             8'd212, 8'd142
         };
 
@@ -264,7 +256,6 @@ module mlp_controller_tb();
             8'd165, 8'd151,
             8'd162, 8'd136,
             8'd217, 8'd156,
-            8'd211, 8'd144,
             8'd211, 8'd144
         };
 
@@ -285,7 +276,6 @@ module mlp_controller_tb();
             8'd170, 8'd95,
             8'd168, 8'd95,
             8'd222, 8'd148,
-            8'd214, 8'd141,
             8'd214, 8'd141
         };
 
@@ -306,7 +296,6 @@ module mlp_controller_tb();
             8'd177, 8'd97,
             8'd174, 8'd97,
             8'd219, 8'd150,
-            8'd216, 8'd137,
             8'd216, 8'd137
         };
 
@@ -327,7 +316,6 @@ module mlp_controller_tb();
             8'd176, 8'd98,
             8'd176, 8'd96,
             8'd220, 8'd151,
-            8'd213, 8'd138,
             8'd213, 8'd138
         };
 
@@ -348,7 +336,6 @@ module mlp_controller_tb();
             8'd168, 8'd113,
             8'd165, 8'd111,
             8'd223, 8'd152,
-            8'd217, 8'd141,
             8'd217, 8'd141
         };
 
@@ -369,7 +356,6 @@ module mlp_controller_tb();
             8'd162, 8'd141,
             8'd160, 8'd131,
             8'd221, 8'd153,
-            8'd208, 8'd142,
             8'd208, 8'd142
         };
 
@@ -434,16 +420,19 @@ module mlp_controller_tb();
         end
 
         // trigger start (adjust address if needed)
-        axi_write(8'h00, 1);
+        axi_write(8'h90, 0);
         @(posedge S_AXI_ACLK);
-        axi_write(8'h00, 0);
+        axi_write(8'h8c, 1);
+        @(posedge S_AXI_ACLK);
+        axi_write(8'h8c, 0);
     endtask
 
+    reg [31:0] status;
     task automatic wait_for_done();
-        reg [31:0] status;
+        //reg [31:0] status;
         begin
             while (1) begin
-                axi_read(8'd156, status); // done register
+                axi_read(8'h90, status); // done register
                 if (status == 1) break;
                 @(posedge S_AXI_ACLK);
             end
@@ -453,7 +442,7 @@ module mlp_controller_tb();
     task automatic print_outputs();
         reg [31:0] result;
         begin
-            axi_read(8'd160, result);
+            axi_read(8'h94, result);
 
             $display("[TB] MLP output:");
             case(result[1:0])
