@@ -1,0 +1,738 @@
+
+*** Running vivado
+    with args -log workout_classifier_mlp_controller_0_2.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source workout_classifier_mlp_controller_0_2.tcl
+
+
+
+****** Vivado v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Mon Apr 20 20:23:45 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source workout_classifier_mlp_controller_0_2.tcl -notrace
+create_project: Time (s): cpu = 00:00:07 ; elapsed = 00:00:05 . Memory (MB): peak = 536.125 ; gain = 222.699
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'z:/ece554_final_project/ip_repo/mlp_controller_1_0'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/AMDDesignTools/2025.2/Vivado/data/ip'.
+update_ip_catalog: Time (s): cpu = 00:00:01 ; elapsed = 00:00:13 . Memory (MB): peak = 541.109 ; gain = 4.984
+Command: synth_design -top workout_classifier_mlp_controller_0_2 -part xczu3eg-sfvc784-2-e -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xczu3eg'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xczu3eg'
+INFO: [Device 21-403] Loading part xczu3eg-sfvc784-2-e
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 852
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:01:01 . Memory (MB): peak = 1767.156 ; gain = 206.527
+---------------------------------------------------------------------------------
+INFO: [Synth 8-11241] undeclared symbol 'valid_mac_out', assumed default net type 'wire' [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:118]
+INFO: [Synth 8-6157] synthesizing module 'workout_classifier_mlp_controller_0_2' [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ip/workout_classifier_mlp_controller_0_2/synth/workout_classifier_mlp_controller_0_2.v:53]
+INFO: [Synth 8-6157] synthesizing module 'mlp_controller' [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/hdl/mlp_controller.v:4]
+INFO: [Synth 8-6157] synthesizing module 'mlp_controller_slave_lite_v1_0_S00_AXI' [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/hdl/mlp_controller_slave_lite_v1_0_S00_AXI.v:4]
+INFO: [Synth 8-155] case statement is not full and has no default [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/hdl/mlp_controller_slave_lite_v1_0_S00_AXI.v:208]
+INFO: [Synth 8-226] default block is never used [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/hdl/mlp_controller_slave_lite_v1_0_S00_AXI.v:342]
+INFO: [Synth 8-155] case statement is not full and has no default [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/hdl/mlp_controller_slave_lite_v1_0_S00_AXI.v:875]
+INFO: [Synth 8-6157] synthesizing module 'mlp_classifier' [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'weight_bram_ctrl' [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/weight_bram_ctrl.sv:23]
+INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_0' [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ip/workout_classifier_mlp_controller_0_2/src/blk_mem_gen_0_1/synth/blk_mem_gen_0.vhd:68]
+	Parameter C_FAMILY bound to: zynquplus - type: string 
+	Parameter C_XDEVICEFAMILY bound to: zynquplus - type: string 
+	Parameter C_ELABORATION_DIR bound to: ./ - type: string 
+	Parameter C_INTERFACE_TYPE bound to: 0 - type: integer 
+	Parameter C_AXI_TYPE bound to: 1 - type: integer 
+	Parameter C_AXI_SLAVE_TYPE bound to: 0 - type: integer 
+	Parameter C_USE_BRAM_BLOCK bound to: 0 - type: integer 
+	Parameter C_ENABLE_32BIT_ADDRESS bound to: 0 - type: integer 
+	Parameter C_CTRL_ECC_ALGO bound to: NONE - type: string 
+	Parameter C_HAS_AXI_ID bound to: 0 - type: integer 
+	Parameter C_AXI_ID_WIDTH bound to: 4 - type: integer 
+	Parameter C_MEM_TYPE bound to: 3 - type: integer 
+	Parameter C_BYTE_SIZE bound to: 9 - type: integer 
+	Parameter C_ALGORITHM bound to: 1 - type: integer 
+	Parameter C_PRIM_TYPE bound to: 1 - type: integer 
+	Parameter C_LOAD_INIT_FILE bound to: 1 - type: integer 
+	Parameter C_INIT_FILE_NAME bound to: blk_mem_gen_0.mif - type: string 
+	Parameter C_INIT_FILE bound to: blk_mem_gen_0.mem - type: string 
+	Parameter C_USE_DEFAULT_DATA bound to: 0 - type: integer 
+	Parameter C_DEFAULT_DATA bound to: 0 - type: string 
+	Parameter C_HAS_RSTA bound to: 0 - type: integer 
+	Parameter C_RST_PRIORITY_A bound to: CE - type: string 
+	Parameter C_RSTRAM_A bound to: 0 - type: integer 
+	Parameter C_INITA_VAL bound to: 0 - type: string 
+	Parameter C_HAS_ENA bound to: 1 - type: integer 
+	Parameter C_HAS_REGCEA bound to: 0 - type: integer 
+	Parameter C_USE_BYTE_WEA bound to: 0 - type: integer 
+	Parameter C_WEA_WIDTH bound to: 1 - type: integer 
+	Parameter C_WRITE_MODE_A bound to: WRITE_FIRST - type: string 
+	Parameter C_WRITE_WIDTH_A bound to: 8 - type: integer 
+	Parameter C_READ_WIDTH_A bound to: 8 - type: integer 
+	Parameter C_WRITE_DEPTH_A bound to: 13187 - type: integer 
+	Parameter C_READ_DEPTH_A bound to: 13187 - type: integer 
+	Parameter C_ADDRA_WIDTH bound to: 14 - type: integer 
+	Parameter C_HAS_RSTB bound to: 0 - type: integer 
+	Parameter C_RST_PRIORITY_B bound to: CE - type: string 
+	Parameter C_RSTRAM_B bound to: 0 - type: integer 
+	Parameter C_INITB_VAL bound to: 0 - type: string 
+	Parameter C_HAS_ENB bound to: 0 - type: integer 
+	Parameter C_HAS_REGCEB bound to: 0 - type: integer 
+	Parameter C_USE_BYTE_WEB bound to: 0 - type: integer 
+	Parameter C_WEB_WIDTH bound to: 1 - type: integer 
+	Parameter C_WRITE_MODE_B bound to: WRITE_FIRST - type: string 
+	Parameter C_WRITE_WIDTH_B bound to: 8 - type: integer 
+	Parameter C_READ_WIDTH_B bound to: 8 - type: integer 
+	Parameter C_WRITE_DEPTH_B bound to: 13187 - type: integer 
+	Parameter C_READ_DEPTH_B bound to: 13187 - type: integer 
+	Parameter C_ADDRB_WIDTH bound to: 14 - type: integer 
+	Parameter C_HAS_MEM_OUTPUT_REGS_A bound to: 1 - type: integer 
+	Parameter C_HAS_MEM_OUTPUT_REGS_B bound to: 0 - type: integer 
+	Parameter C_HAS_MUX_OUTPUT_REGS_A bound to: 0 - type: integer 
+	Parameter C_HAS_MUX_OUTPUT_REGS_B bound to: 0 - type: integer 
+	Parameter C_MUX_PIPELINE_STAGES bound to: 0 - type: integer 
+	Parameter C_HAS_SOFTECC_INPUT_REGS_A bound to: 0 - type: integer 
+	Parameter C_HAS_SOFTECC_OUTPUT_REGS_B bound to: 0 - type: integer 
+	Parameter C_USE_SOFTECC bound to: 0 - type: integer 
+	Parameter C_USE_ECC bound to: 0 - type: integer 
+	Parameter C_EN_ECC_PIPE bound to: 0 - type: integer 
+	Parameter C_READ_LATENCY_A bound to: 1 - type: integer 
+	Parameter C_READ_LATENCY_B bound to: 1 - type: integer 
+	Parameter C_HAS_INJECTERR bound to: 0 - type: integer 
+	Parameter C_SIM_COLLISION_CHECK bound to: ALL - type: string 
+	Parameter C_COMMON_CLK bound to: 0 - type: integer 
+	Parameter C_DISABLE_WARN_BHV_COLL bound to: 0 - type: integer 
+	Parameter C_EN_SLEEP_PIN bound to: 0 - type: integer 
+	Parameter C_USE_URAM bound to: 0 - type: integer 
+	Parameter C_EN_RDADDRA_CHG bound to: 0 - type: integer 
+	Parameter C_EN_RDADDRB_CHG bound to: 0 - type: integer 
+	Parameter C_EN_DEEPSLEEP_PIN bound to: 0 - type: integer 
+	Parameter C_EN_SHUTDOWN_PIN bound to: 0 - type: integer 
+	Parameter C_EN_SAFETY_CKT bound to: 0 - type: integer 
+	Parameter C_DISABLE_WARN_BHV_RANGE bound to: 0 - type: integer 
+	Parameter C_COUNT_36K_BRAM bound to: 3 - type: string 
+	Parameter C_COUNT_18K_BRAM bound to: 1 - type: string 
+	Parameter C_EST_POWER_SUMMARY bound to: Estimated Power for IP     :     1.8981 mW - type: string 
+INFO: [Synth 8-3491] module 'blk_mem_gen_v8_4_12' declared at 'z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ip/workout_classifier_mlp_controller_0_2/src/blk_mem_gen_0_1/hdl/blk_mem_gen_v8_4_vhsyn_rfs.vhd:195209' bound to instance 'U0' of component 'blk_mem_gen_v8_4_12' [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ip/workout_classifier_mlp_controller_0_2/src/blk_mem_gen_0_1/synth/blk_mem_gen_0.vhd:234]
+INFO: [Synth 8-256] done synthesizing module 'blk_mem_gen_0' (0#1) [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ip/workout_classifier_mlp_controller_0_2/src/blk_mem_gen_0_1/synth/blk_mem_gen_0.vhd:68]
+INFO: [Synth 8-6155] done synthesizing module 'weight_bram_ctrl' (0#1) [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/weight_bram_ctrl.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'mac' [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mac.sv:23]
+INFO: [Synth 8-638] synthesizing module 'dsp_macro_0' [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ip/workout_classifier_mlp_controller_0_2/src/dsp_macro_0_1/synth/dsp_macro_0.vhd:69]
+	Parameter C_VERBOSITY bound to: 0 - type: integer 
+	Parameter C_MODEL_TYPE bound to: 0 - type: integer 
+	Parameter C_XDEVICEFAMILY bound to: zynquplus - type: string 
+	Parameter C_HAS_CE bound to: 0 - type: integer 
+	Parameter C_HAS_INDEP_CE bound to: 0 - type: integer 
+	Parameter C_HAS_CED bound to: 0 - type: integer 
+	Parameter C_HAS_CEA bound to: 0 - type: integer 
+	Parameter C_HAS_CEB bound to: 0 - type: integer 
+	Parameter C_HAS_CEC bound to: 0 - type: integer 
+	Parameter C_HAS_CECONCAT bound to: 0 - type: integer 
+	Parameter C_HAS_CEM bound to: 0 - type: integer 
+	Parameter C_HAS_CEP bound to: 0 - type: integer 
+	Parameter C_HAS_CESEL bound to: 0 - type: integer 
+	Parameter C_HAS_SCLR bound to: 0 - type: integer 
+	Parameter C_HAS_INDEP_SCLR bound to: 0 - type: integer 
+	Parameter C_HAS_SCLRD bound to: 0 - type: integer 
+	Parameter C_HAS_SCLRA bound to: 0 - type: integer 
+	Parameter C_HAS_SCLRB bound to: 0 - type: integer 
+	Parameter C_HAS_SCLRC bound to: 0 - type: integer 
+	Parameter C_HAS_SCLRM bound to: 0 - type: integer 
+	Parameter C_HAS_SCLRP bound to: 0 - type: integer 
+	Parameter C_HAS_SCLRCONCAT bound to: 0 - type: integer 
+	Parameter C_HAS_SCLRSEL bound to: 0 - type: integer 
+	Parameter C_HAS_CARRYCASCIN bound to: 0 - type: integer 
+	Parameter C_HAS_CARRYIN bound to: 0 - type: integer 
+	Parameter C_HAS_ACIN bound to: 0 - type: integer 
+	Parameter C_HAS_BCIN bound to: 0 - type: integer 
+	Parameter C_HAS_PCIN bound to: 0 - type: integer 
+	Parameter C_HAS_A bound to: 1 - type: integer 
+	Parameter C_HAS_B bound to: 1 - type: integer 
+	Parameter C_HAS_D bound to: 0 - type: integer 
+	Parameter C_HAS_CONCAT bound to: 0 - type: integer 
+	Parameter C_HAS_C bound to: 1 - type: integer 
+	Parameter C_SQUARE_FCN bound to: 0 - type: integer 
+	Parameter C_A_WIDTH bound to: 8 - type: integer 
+	Parameter C_B_WIDTH bound to: 8 - type: integer 
+	Parameter C_C_WIDTH bound to: 20 - type: integer 
+	Parameter C_D_WIDTH bound to: 18 - type: integer 
+	Parameter C_CONCAT_WIDTH bound to: 48 - type: integer 
+	Parameter C_P_MSB bound to: 20 - type: integer 
+	Parameter C_P_LSB bound to: 0 - type: integer 
+	Parameter C_SEL_WIDTH bound to: 0 - type: integer 
+	Parameter C_HAS_ACOUT bound to: 0 - type: integer 
+	Parameter C_HAS_BCOUT bound to: 0 - type: integer 
+	Parameter C_HAS_CARRYCASCOUT bound to: 0 - type: integer 
+	Parameter C_HAS_CARRYOUT bound to: 0 - type: integer 
+	Parameter C_HAS_PCOUT bound to: 0 - type: integer 
+	Parameter C_CONSTANT_1 bound to: 1 - type: integer 
+	Parameter C_LATENCY bound to: -1 - type: integer 
+	Parameter C_OPMODES bound to: 000100111000010100000000 - type: string 
+	Parameter C_REG_CONFIG bound to: 00000000000011100011100011000100 - type: string 
+	Parameter C_TEST_CORE bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'dsp_macro_v1_0_9' declared at 'z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ip/workout_classifier_mlp_controller_0_2/src/dsp_macro_0_1/hdl/dsp_macro_v1_0_rfs.vhd:5234' bound to instance 'U0' of component 'dsp_macro_v1_0_9' [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ip/workout_classifier_mlp_controller_0_2/src/dsp_macro_0_1/synth/dsp_macro_0.vhd:217]
+INFO: [Synth 8-256] done synthesizing module 'dsp_macro_0' (0#1) [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ip/workout_classifier_mlp_controller_0_2/src/dsp_macro_0_1/synth/dsp_macro_0.vhd:69]
+INFO: [Synth 8-6155] done synthesizing module 'mac' (0#1) [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mac.sv:23]
+INFO: [Synth 8-155] case statement is not full and has no default [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:271]
+INFO: [Synth 8-155] case statement is not full and has no default [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:233]
+INFO: [Synth 8-6155] done synthesizing module 'mlp_classifier' (0#1) [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'mlp_controller_slave_lite_v1_0_S00_AXI' (0#1) [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/hdl/mlp_controller_slave_lite_v1_0_S00_AXI.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'mlp_controller' (0#1) [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/hdl/mlp_controller.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'workout_classifier_mlp_controller_0_2' (0#1) [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ip/workout_classifier_mlp_controller_0_2/synth/workout_classifier_mlp_controller_0_2.v:53]
+WARNING: [Synth 8-87] always_comb on 'layer_sel_reg' did not result in combinational logic [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:113]
+WARNING: [Synth 8-87] always_comb on 'bias_sel_reg' did not result in combinational logic [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:113]
+WARNING: [Synth 8-87] always_comb on 'current_layer1_bias_reg' did not result in combinational logic [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:248]
+WARNING: [Synth 8-87] always_comb on 'neuron_reg' did not result in combinational logic [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:113]
+WARNING: [Synth 8-87] always_comb on 'input_num_reg' did not result in combinational logic [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:113]
+WARNING: [Synth 8-87] always_comb on 'current_layer1_weights_reg[35]' did not result in combinational logic [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:260]
+WARNING: [Synth 8-87] always_comb on 'current_layer1_weights_reg[34]' did not result in combinational logic [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:260]
+WARNING: [Synth 8-87] always_comb on 'current_layer1_weights_reg[33]' did not result in combinational logic [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:260]
+WARNING: [Synth 8-87] always_comb on 'current_layer1_weights_reg[32]' did not result in combinational logic [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:260]
+WARNING: [Synth 8-87] always_comb on 'current_layer1_weights_reg[31]' did not result in combinational logic [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:260]
+WARNING: [Synth 8-87] always_comb on 'current_layer1_weights_reg[30]' did not result in combinational logic [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:260]
+WARNING: [Synth 8-87] always_comb on 'current_layer1_weights_reg[29]' did not result in combinational logic [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:260]
+WARNING: [Synth 8-87] always_comb on 'current_layer1_weights_reg[28]' did not result in combinational logic [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:260]
+WARNING: [Synth 8-87] always_comb on 'current_layer1_weights_reg[27]' did not result in combinational logic [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:260]
+WARNING: [Synth 8-87] always_comb on 'current_layer1_weights_reg[26]' did not result in combinational logic [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:260]
+WARNING: [Synth 8-87] always_comb on 'current_layer1_weights_reg[25]' did not result in combinational logic [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:260]
+WARNING: [Synth 8-87] always_comb on 'current_layer1_weights_reg[24]' did not result in combinational logic [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:260]
+WARNING: [Synth 8-87] always_comb on 'current_layer1_weights_reg[23]' did not result in combinational logic [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:260]
+WARNING: [Synth 8-87] always_comb on 'current_layer1_weights_reg[22]' did not result in combinational logic [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:260]
+WARNING: [Synth 8-87] always_comb on 'current_layer1_weights_reg[21]' did not result in combinational logic [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:260]
+WARNING: [Synth 8-87] always_comb on 'current_layer1_weights_reg[20]' did not result in combinational logic [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:260]
+WARNING: [Synth 8-87] always_comb on 'current_layer1_weights_reg[19]' did not result in combinational logic [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:260]
+WARNING: [Synth 8-87] always_comb on 'current_layer1_weights_reg[18]' did not result in combinational logic [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:260]
+WARNING: [Synth 8-87] always_comb on 'current_layer1_weights_reg[17]' did not result in combinational logic [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:260]
+WARNING: [Synth 8-87] always_comb on 'current_layer1_weights_reg[16]' did not result in combinational logic [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:260]
+WARNING: [Synth 8-87] always_comb on 'current_layer1_weights_reg[15]' did not result in combinational logic [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:260]
+WARNING: [Synth 8-87] always_comb on 'current_layer1_weights_reg[14]' did not result in combinational logic [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:260]
+WARNING: [Synth 8-87] always_comb on 'current_layer1_weights_reg[13]' did not result in combinational logic [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:260]
+WARNING: [Synth 8-87] always_comb on 'current_layer1_weights_reg[12]' did not result in combinational logic [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:260]
+WARNING: [Synth 8-87] always_comb on 'current_layer1_weights_reg[11]' did not result in combinational logic [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:260]
+WARNING: [Synth 8-87] always_comb on 'current_layer1_weights_reg[10]' did not result in combinational logic [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:260]
+WARNING: [Synth 8-87] always_comb on 'current_layer1_weights_reg[9]' did not result in combinational logic [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:260]
+WARNING: [Synth 8-87] always_comb on 'current_layer1_weights_reg[8]' did not result in combinational logic [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:260]
+WARNING: [Synth 8-87] always_comb on 'current_layer1_weights_reg[7]' did not result in combinational logic [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:260]
+WARNING: [Synth 8-87] always_comb on 'current_layer1_weights_reg[6]' did not result in combinational logic [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:260]
+WARNING: [Synth 8-87] always_comb on 'current_layer1_weights_reg[5]' did not result in combinational logic [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:260]
+WARNING: [Synth 8-87] always_comb on 'current_layer1_weights_reg[4]' did not result in combinational logic [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:260]
+WARNING: [Synth 8-87] always_comb on 'current_layer1_weights_reg[3]' did not result in combinational logic [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:260]
+WARNING: [Synth 8-87] always_comb on 'current_layer1_weights_reg[2]' did not result in combinational logic [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:260]
+WARNING: [Synth 8-87] always_comb on 'current_layer1_weights_reg[1]' did not result in combinational logic [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:260]
+WARNING: [Synth 8-87] always_comb on 'current_layer1_weights_reg[0]' did not result in combinational logic [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:260]
+WARNING: [Synth 8-87] always_comb on 'acc_in_reg' did not result in combinational logic [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:117]
+WARNING: [Synth 8-87] always_comb on 'point_reg' did not result in combinational logic [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:117]
+WARNING: [Synth 8-87] always_comb on 'weight_reg' did not result in combinational logic [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:117]
+WARNING: [Synth 8-87] always_comb on 'current_layer2_bias_reg' did not result in combinational logic [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:409]
+WARNING: [Synth 8-87] always_comb on 'current_layer2_weights_reg[127]' did not result in combinational logic [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:421]
+WARNING: [Synth 8-87] always_comb on 'current_layer2_weights_reg[126]' did not result in combinational logic [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:421]
+WARNING: [Synth 8-87] always_comb on 'current_layer2_weights_reg[125]' did not result in combinational logic [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:421]
+WARNING: [Synth 8-87] always_comb on 'current_layer2_weights_reg[124]' did not result in combinational logic [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:421]
+WARNING: [Synth 8-87] always_comb on 'current_layer2_weights_reg[123]' did not result in combinational logic [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:421]
+WARNING: [Synth 8-87] always_comb on 'current_layer2_weights_reg[122]' did not result in combinational logic [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:421]
+WARNING: [Synth 8-87] always_comb on 'current_layer2_weights_reg[121]' did not result in combinational logic [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:421]
+WARNING: [Synth 8-87] always_comb on 'current_layer2_weights_reg[120]' did not result in combinational logic [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:421]
+WARNING: [Synth 8-87] always_comb on 'current_layer2_weights_reg[119]' did not result in combinational logic [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:421]
+WARNING: [Synth 8-87] always_comb on 'current_layer2_weights_reg[118]' did not result in combinational logic [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:421]
+WARNING: [Synth 8-87] always_comb on 'current_layer2_weights_reg[117]' did not result in combinational logic [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:421]
+WARNING: [Synth 8-87] always_comb on 'current_layer2_weights_reg[116]' did not result in combinational logic [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:421]
+WARNING: [Synth 8-87] always_comb on 'current_layer2_weights_reg[115]' did not result in combinational logic [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:421]
+WARNING: [Synth 8-87] always_comb on 'current_layer2_weights_reg[114]' did not result in combinational logic [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:421]
+WARNING: [Synth 8-87] always_comb on 'current_layer2_weights_reg[113]' did not result in combinational logic [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:421]
+WARNING: [Synth 8-87] always_comb on 'current_layer2_weights_reg[112]' did not result in combinational logic [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:421]
+WARNING: [Synth 8-87] always_comb on 'current_layer2_weights_reg[111]' did not result in combinational logic [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:421]
+WARNING: [Synth 8-87] always_comb on 'current_layer2_weights_reg[110]' did not result in combinational logic [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:421]
+WARNING: [Synth 8-87] always_comb on 'current_layer2_weights_reg[109]' did not result in combinational logic [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:421]
+WARNING: [Synth 8-87] always_comb on 'current_layer2_weights_reg[108]' did not result in combinational logic [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:421]
+WARNING: [Synth 8-87] always_comb on 'current_layer2_weights_reg[107]' did not result in combinational logic [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:421]
+WARNING: [Synth 8-87] always_comb on 'current_layer2_weights_reg[106]' did not result in combinational logic [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:421]
+WARNING: [Synth 8-87] always_comb on 'current_layer2_weights_reg[105]' did not result in combinational logic [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:421]
+WARNING: [Synth 8-87] always_comb on 'current_layer2_weights_reg[104]' did not result in combinational logic [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:421]
+WARNING: [Synth 8-87] always_comb on 'current_layer2_weights_reg[103]' did not result in combinational logic [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:421]
+WARNING: [Synth 8-87] always_comb on 'current_layer2_weights_reg[102]' did not result in combinational logic [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:421]
+WARNING: [Synth 8-87] always_comb on 'current_layer2_weights_reg[101]' did not result in combinational logic [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:421]
+WARNING: [Synth 8-87] always_comb on 'current_layer2_weights_reg[100]' did not result in combinational logic [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:421]
+WARNING: [Synth 8-87] always_comb on 'current_layer2_weights_reg[99]' did not result in combinational logic [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:421]
+WARNING: [Synth 8-87] always_comb on 'current_layer2_weights_reg[98]' did not result in combinational logic [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:421]
+WARNING: [Synth 8-87] always_comb on 'current_layer2_weights_reg[97]' did not result in combinational logic [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:421]
+WARNING: [Synth 8-87] always_comb on 'current_layer2_weights_reg[96]' did not result in combinational logic [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:421]
+WARNING: [Synth 8-87] always_comb on 'current_layer2_weights_reg[95]' did not result in combinational logic [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:421]
+WARNING: [Synth 8-87] always_comb on 'current_layer2_weights_reg[94]' did not result in combinational logic [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:421]
+WARNING: [Synth 8-87] always_comb on 'current_layer2_weights_reg[93]' did not result in combinational logic [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:421]
+WARNING: [Synth 8-87] always_comb on 'current_layer2_weights_reg[92]' did not result in combinational logic [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:421]
+WARNING: [Synth 8-87] always_comb on 'current_layer2_weights_reg[91]' did not result in combinational logic [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:421]
+WARNING: [Synth 8-87] always_comb on 'current_layer2_weights_reg[90]' did not result in combinational logic [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:421]
+WARNING: [Synth 8-87] always_comb on 'current_layer2_weights_reg[89]' did not result in combinational logic [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:421]
+WARNING: [Synth 8-87] always_comb on 'current_layer2_weights_reg[88]' did not result in combinational logic [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:421]
+WARNING: [Synth 8-87] always_comb on 'current_layer2_weights_reg[87]' did not result in combinational logic [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:421]
+WARNING: [Synth 8-87] always_comb on 'current_layer2_weights_reg[86]' did not result in combinational logic [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:421]
+WARNING: [Synth 8-87] always_comb on 'current_layer2_weights_reg[85]' did not result in combinational logic [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:421]
+WARNING: [Synth 8-87] always_comb on 'current_layer2_weights_reg[84]' did not result in combinational logic [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:421]
+WARNING: [Synth 8-87] always_comb on 'current_layer2_weights_reg[83]' did not result in combinational logic [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:421]
+WARNING: [Synth 8-87] always_comb on 'current_layer2_weights_reg[82]' did not result in combinational logic [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:421]
+WARNING: [Synth 8-87] always_comb on 'current_layer2_weights_reg[81]' did not result in combinational logic [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:421]
+WARNING: [Synth 8-87] always_comb on 'current_layer2_weights_reg[80]' did not result in combinational logic [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:421]
+WARNING: [Synth 8-87] always_comb on 'current_layer2_weights_reg[79]' did not result in combinational logic [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:421]
+WARNING: [Synth 8-87] always_comb on 'current_layer2_weights_reg[78]' did not result in combinational logic [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:421]
+WARNING: [Synth 8-87] always_comb on 'current_layer2_weights_reg[77]' did not result in combinational logic [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:421]
+WARNING: [Synth 8-87] always_comb on 'current_layer2_weights_reg[76]' did not result in combinational logic [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:421]
+WARNING: [Synth 8-87] always_comb on 'current_layer2_weights_reg[75]' did not result in combinational logic [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:421]
+WARNING: [Synth 8-87] always_comb on 'current_layer2_weights_reg[74]' did not result in combinational logic [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:421]
+WARNING: [Synth 8-87] always_comb on 'current_layer2_weights_reg[73]' did not result in combinational logic [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:421]
+INFO: [Common 17-14] Message 'Synth 8-87' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-7129] Port CE in module xbip_dsp48e2_wrapper_v3_0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SCLR in module xbip_dsp48e2_wrapper_v3_0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port CEAD in module xbip_dsp48e2_wrapper_v3_0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port CED in module xbip_dsp48e2_wrapper_v3_0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SCLRD in module xbip_dsp48e2_wrapper_v3_0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_11_viv__parameterized7 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_11_viv__parameterized7 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_11_viv__parameterized7 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_11_viv__parameterized7 is either unconnected or has no load
+INFO: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_11_viv__parameterized6 is either unconnected or has no load
+INFO: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_11_viv__parameterized6 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_11_viv__parameterized6 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_11_viv__parameterized6 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_11_viv__parameterized6 is either unconnected or has no load
+INFO: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_11_viv__parameterized5 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_11_viv__parameterized5 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_11_viv__parameterized5 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_11_viv__parameterized5 is either unconnected or has no load
+INFO: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_11_viv__parameterized4 is either unconnected or has no load
+INFO: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_11_viv__parameterized4 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_11_viv__parameterized4 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_11_viv__parameterized4 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_11_viv__parameterized4 is either unconnected or has no load
+INFO: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_11_viv__parameterized3 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_11_viv__parameterized3 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_11_viv__parameterized3 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_11_viv__parameterized3 is either unconnected or has no load
+INFO: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_11_viv__parameterized2 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_11_viv__parameterized2 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_11_viv__parameterized2 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_11_viv__parameterized2 is either unconnected or has no load
+INFO: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_11_viv__parameterized1 is either unconnected or has no load
+INFO: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_11_viv__parameterized1 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_11_viv__parameterized1 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_11_viv__parameterized1 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_11_viv__parameterized1 is either unconnected or has no load
+INFO: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_11_viv__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_11_viv__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_11_viv__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_11_viv__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_11_viv__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_11_viv is either unconnected or has no load
+INFO: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_11_viv is either unconnected or has no load
+INFO: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_11_viv is either unconnected or has no load
+INFO: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_11_viv is either unconnected or has no load
+INFO: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_11_viv is either unconnected or has no load
+INFO: [Synth 8-7129] Port CE in module dsp_macro_synth is either unconnected or has no load
+INFO: [Synth 8-7129] Port SCLR in module dsp_macro_synth is either unconnected or has no load
+INFO: [Synth 8-7129] Port SEL[0] in module dsp_macro_synth is either unconnected or has no load
+INFO: [Synth 8-7129] Port D[17] in module dsp_macro_synth is either unconnected or has no load
+INFO: [Synth 8-7129] Port D[16] in module dsp_macro_synth is either unconnected or has no load
+INFO: [Synth 8-7129] Port D[15] in module dsp_macro_synth is either unconnected or has no load
+INFO: [Synth 8-7129] Port D[14] in module dsp_macro_synth is either unconnected or has no load
+INFO: [Synth 8-7129] Port D[13] in module dsp_macro_synth is either unconnected or has no load
+INFO: [Synth 8-7129] Port D[12] in module dsp_macro_synth is either unconnected or has no load
+INFO: [Synth 8-7129] Port D[11] in module dsp_macro_synth is either unconnected or has no load
+INFO: [Synth 8-7129] Port D[10] in module dsp_macro_synth is either unconnected or has no load
+INFO: [Synth 8-7129] Port D[9] in module dsp_macro_synth is either unconnected or has no load
+INFO: [Synth 8-7129] Port D[8] in module dsp_macro_synth is either unconnected or has no load
+INFO: [Synth 8-7129] Port D[7] in module dsp_macro_synth is either unconnected or has no load
+INFO: [Synth 8-7129] Port D[6] in module dsp_macro_synth is either unconnected or has no load
+INFO: [Synth 8-7129] Port D[5] in module dsp_macro_synth is either unconnected or has no load
+INFO: [Synth 8-7129] Port D[4] in module dsp_macro_synth is either unconnected or has no load
+INFO: [Synth 8-7129] Port D[3] in module dsp_macro_synth is either unconnected or has no load
+INFO: [Synth 8-7129] Port D[2] in module dsp_macro_synth is either unconnected or has no load
+INFO: [Synth 8-7129] Port D[1] in module dsp_macro_synth is either unconnected or has no load
+INFO: [Synth 8-7129] Port D[0] in module dsp_macro_synth is either unconnected or has no load
+INFO: [Synth 8-7129] Port CONCAT[47] in module dsp_macro_synth is either unconnected or has no load
+INFO: [Synth 8-7129] Port CONCAT[46] in module dsp_macro_synth is either unconnected or has no load
+INFO: [Synth 8-7129] Port CONCAT[45] in module dsp_macro_synth is either unconnected or has no load
+INFO: [Synth 8-7129] Port CONCAT[44] in module dsp_macro_synth is either unconnected or has no load
+INFO: [Synth 8-7129] Port CONCAT[43] in module dsp_macro_synth is either unconnected or has no load
+INFO: [Synth 8-7129] Port CONCAT[42] in module dsp_macro_synth is either unconnected or has no load
+INFO: [Synth 8-7129] Port CONCAT[41] in module dsp_macro_synth is either unconnected or has no load
+INFO: [Synth 8-7129] Port CONCAT[40] in module dsp_macro_synth is either unconnected or has no load
+INFO: [Synth 8-7129] Port CONCAT[39] in module dsp_macro_synth is either unconnected or has no load
+INFO: [Synth 8-7129] Port CONCAT[38] in module dsp_macro_synth is either unconnected or has no load
+INFO: [Synth 8-7129] Port CONCAT[37] in module dsp_macro_synth is either unconnected or has no load
+INFO: [Synth 8-7129] Port CONCAT[36] in module dsp_macro_synth is either unconnected or has no load
+INFO: [Synth 8-7129] Port CONCAT[35] in module dsp_macro_synth is either unconnected or has no load
+INFO: [Synth 8-7129] Port CONCAT[34] in module dsp_macro_synth is either unconnected or has no load
+INFO: [Synth 8-7129] Port CONCAT[33] in module dsp_macro_synth is either unconnected or has no load
+INFO: [Synth 8-7129] Port CONCAT[32] in module dsp_macro_synth is either unconnected or has no load
+INFO: [Synth 8-7129] Port CONCAT[31] in module dsp_macro_synth is either unconnected or has no load
+INFO: [Synth 8-7129] Port CONCAT[30] in module dsp_macro_synth is either unconnected or has no load
+INFO: [Synth 8-7129] Port CONCAT[29] in module dsp_macro_synth is either unconnected or has no load
+INFO: [Synth 8-7129] Port CONCAT[28] in module dsp_macro_synth is either unconnected or has no load
+INFO: [Synth 8-7129] Port CONCAT[27] in module dsp_macro_synth is either unconnected or has no load
+INFO: [Synth 8-7129] Port CONCAT[26] in module dsp_macro_synth is either unconnected or has no load
+INFO: [Synth 8-7129] Port CONCAT[25] in module dsp_macro_synth is either unconnected or has no load
+INFO: [Synth 8-7129] Port CONCAT[24] in module dsp_macro_synth is either unconnected or has no load
+INFO: [Synth 8-7129] Port CONCAT[23] in module dsp_macro_synth is either unconnected or has no load
+INFO: [Synth 8-7129] Port CONCAT[22] in module dsp_macro_synth is either unconnected or has no load
+INFO: [Synth 8-7129] Port CONCAT[21] in module dsp_macro_synth is either unconnected or has no load
+INFO: [Synth 8-7129] Port CONCAT[20] in module dsp_macro_synth is either unconnected or has no load
+INFO: [Synth 8-7129] Port CONCAT[19] in module dsp_macro_synth is either unconnected or has no load
+INFO: [Synth 8-7129] Port CONCAT[18] in module dsp_macro_synth is either unconnected or has no load
+INFO: [Synth 8-7129] Port CONCAT[17] in module dsp_macro_synth is either unconnected or has no load
+INFO: [Synth 8-7129] Port CONCAT[16] in module dsp_macro_synth is either unconnected or has no load
+INFO: [Synth 8-7129] Port CONCAT[15] in module dsp_macro_synth is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:13 ; elapsed = 00:03:55 . Memory (MB): peak = 2177.727 ; gain = 617.098
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:13 ; elapsed = 00:03:55 . Memory (MB): peak = 2177.727 ; gain = 617.098
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:13 ; elapsed = 00:03:55 . Memory (MB): peak = 2177.727 ; gain = 617.098
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.188 . Memory (MB): peak = 2177.727 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [Z:/ece554_final_project/workout_classifier/workout_classifier.runs/workout_classifier_mlp_controller_0_2_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [Z:/ece554_final_project/workout_classifier/workout_classifier.runs/workout_classifier_mlp_controller_0_2_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2232.797 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1 instances were transformed.
+  DSP48E2 => DSP48E2 (DSP_ALU, DSP_A_B_DATA, DSP_C_DATA, DSP_MULTIPLIER, DSP_M_DATA, DSP_OUTPUT, DSP_PREADD, DSP_PREADD_DATA): 1 instance 
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.417 . Memory (MB): peak = 2232.797 ; gain = 0.000
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:21 ; elapsed = 00:05:39 . Memory (MB): peak = 2232.797 ; gain = 672.168
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xczu3eg-sfvc784-2-e
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:21 ; elapsed = 00:05:39 . Memory (MB): peak = 2232.797 ; gain = 672.168
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:21 ; elapsed = 00:05:39 . Memory (MB): peak = 2232.797 ; gain = 672.168
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_write_reg' in module 'mlp_controller_slave_lite_v1_0_S00_AXI'
+INFO: [Synth 8-802] inferred FSM for state register 'state_read_reg' in module 'mlp_controller_slave_lite_v1_0_S00_AXI'
+WARNING: [Synth 8-327] inferring latch for variable 'pose_class_reg' [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:498]
+WARNING: [Synth 8-327] inferring latch for variable 'layer_sel_reg' [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:113]
+WARNING: [Synth 8-327] inferring latch for variable 'neuron_reg' [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:113]
+WARNING: [Synth 8-327] inferring latch for variable 'input_num_reg' [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:113]
+WARNING: [Synth 8-327] inferring latch for variable 'bias_sel_reg' [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:113]
+WARNING: [Synth 8-327] inferring latch for variable 'point_reg' [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:117]
+INFO: [Synth 8-6904] The RAM "mlp_classifier:/layer2_outputs_reg" of size (depth=64 x width=21) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+INFO: [Synth 8-6904] The RAM "mlp_classifier:/layer1_outputs_reg" of size (depth=128 x width=21) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+WARNING: [Synth 8-327] inferring latch for variable 'weight_reg' [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:117]
+WARNING: [Synth 8-327] inferring latch for variable 'acc_in_reg' [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:117]
+WARNING: [Synth 8-327] inferring latch for variable 'current_layer1_weights_reg[35]' [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:260]
+WARNING: [Synth 8-327] inferring latch for variable 'current_layer1_weights_reg[34]' [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:260]
+WARNING: [Synth 8-327] inferring latch for variable 'current_layer1_weights_reg[33]' [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:260]
+WARNING: [Synth 8-327] inferring latch for variable 'current_layer1_weights_reg[32]' [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:260]
+WARNING: [Synth 8-327] inferring latch for variable 'current_layer1_weights_reg[31]' [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:260]
+WARNING: [Synth 8-327] inferring latch for variable 'current_layer1_weights_reg[30]' [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:260]
+WARNING: [Synth 8-327] inferring latch for variable 'current_layer1_weights_reg[29]' [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:260]
+WARNING: [Synth 8-327] inferring latch for variable 'current_layer1_weights_reg[28]' [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:260]
+WARNING: [Synth 8-327] inferring latch for variable 'current_layer1_weights_reg[27]' [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:260]
+WARNING: [Synth 8-327] inferring latch for variable 'current_layer1_weights_reg[26]' [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:260]
+WARNING: [Synth 8-327] inferring latch for variable 'current_layer1_weights_reg[25]' [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:260]
+WARNING: [Synth 8-327] inferring latch for variable 'current_layer1_weights_reg[24]' [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:260]
+WARNING: [Synth 8-327] inferring latch for variable 'current_layer1_weights_reg[23]' [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:260]
+WARNING: [Synth 8-327] inferring latch for variable 'current_layer1_weights_reg[22]' [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:260]
+WARNING: [Synth 8-327] inferring latch for variable 'current_layer1_weights_reg[21]' [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:260]
+WARNING: [Synth 8-327] inferring latch for variable 'current_layer1_weights_reg[20]' [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:260]
+WARNING: [Synth 8-327] inferring latch for variable 'current_layer1_weights_reg[19]' [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:260]
+WARNING: [Synth 8-327] inferring latch for variable 'current_layer1_weights_reg[18]' [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:260]
+WARNING: [Synth 8-327] inferring latch for variable 'current_layer1_weights_reg[17]' [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:260]
+WARNING: [Synth 8-327] inferring latch for variable 'current_layer1_weights_reg[16]' [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:260]
+WARNING: [Synth 8-327] inferring latch for variable 'current_layer1_weights_reg[15]' [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:260]
+WARNING: [Synth 8-327] inferring latch for variable 'current_layer1_weights_reg[14]' [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:260]
+WARNING: [Synth 8-327] inferring latch for variable 'current_layer1_weights_reg[13]' [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:260]
+WARNING: [Synth 8-327] inferring latch for variable 'current_layer1_weights_reg[12]' [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:260]
+WARNING: [Synth 8-327] inferring latch for variable 'current_layer1_weights_reg[11]' [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:260]
+WARNING: [Synth 8-327] inferring latch for variable 'current_layer1_weights_reg[10]' [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:260]
+WARNING: [Synth 8-327] inferring latch for variable 'current_layer1_weights_reg[9]' [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:260]
+WARNING: [Synth 8-327] inferring latch for variable 'current_layer1_weights_reg[8]' [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:260]
+WARNING: [Synth 8-327] inferring latch for variable 'current_layer1_weights_reg[7]' [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:260]
+WARNING: [Synth 8-327] inferring latch for variable 'current_layer1_weights_reg[6]' [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:260]
+WARNING: [Synth 8-327] inferring latch for variable 'current_layer1_weights_reg[5]' [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:260]
+WARNING: [Synth 8-327] inferring latch for variable 'current_layer1_weights_reg[4]' [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:260]
+WARNING: [Synth 8-327] inferring latch for variable 'current_layer1_weights_reg[3]' [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:260]
+WARNING: [Synth 8-327] inferring latch for variable 'current_layer1_weights_reg[2]' [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:260]
+WARNING: [Synth 8-327] inferring latch for variable 'current_layer1_weights_reg[1]' [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:260]
+WARNING: [Synth 8-327] inferring latch for variable 'current_layer1_weights_reg[0]' [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:260]
+WARNING: [Synth 8-327] inferring latch for variable 'current_layer2_weights_reg[127]' [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:421]
+WARNING: [Synth 8-327] inferring latch for variable 'current_layer2_weights_reg[126]' [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:421]
+WARNING: [Synth 8-327] inferring latch for variable 'current_layer2_weights_reg[125]' [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:421]
+WARNING: [Synth 8-327] inferring latch for variable 'current_layer2_weights_reg[124]' [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:421]
+WARNING: [Synth 8-327] inferring latch for variable 'current_layer2_weights_reg[123]' [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:421]
+WARNING: [Synth 8-327] inferring latch for variable 'current_layer2_weights_reg[122]' [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:421]
+WARNING: [Synth 8-327] inferring latch for variable 'current_layer2_weights_reg[121]' [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:421]
+WARNING: [Synth 8-327] inferring latch for variable 'current_layer2_weights_reg[120]' [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:421]
+WARNING: [Synth 8-327] inferring latch for variable 'current_layer2_weights_reg[119]' [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:421]
+WARNING: [Synth 8-327] inferring latch for variable 'current_layer2_weights_reg[118]' [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:421]
+WARNING: [Synth 8-327] inferring latch for variable 'current_layer2_weights_reg[117]' [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:421]
+WARNING: [Synth 8-327] inferring latch for variable 'current_layer2_weights_reg[116]' [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:421]
+WARNING: [Synth 8-327] inferring latch for variable 'current_layer2_weights_reg[115]' [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:421]
+WARNING: [Synth 8-327] inferring latch for variable 'current_layer2_weights_reg[114]' [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:421]
+WARNING: [Synth 8-327] inferring latch for variable 'current_layer2_weights_reg[113]' [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:421]
+WARNING: [Synth 8-327] inferring latch for variable 'current_layer2_weights_reg[112]' [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:421]
+WARNING: [Synth 8-327] inferring latch for variable 'current_layer2_weights_reg[111]' [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:421]
+WARNING: [Synth 8-327] inferring latch for variable 'current_layer2_weights_reg[110]' [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:421]
+WARNING: [Synth 8-327] inferring latch for variable 'current_layer2_weights_reg[109]' [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:421]
+WARNING: [Synth 8-327] inferring latch for variable 'current_layer2_weights_reg[108]' [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:421]
+WARNING: [Synth 8-327] inferring latch for variable 'current_layer2_weights_reg[107]' [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:421]
+WARNING: [Synth 8-327] inferring latch for variable 'current_layer2_weights_reg[106]' [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:421]
+WARNING: [Synth 8-327] inferring latch for variable 'current_layer2_weights_reg[105]' [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:421]
+WARNING: [Synth 8-327] inferring latch for variable 'current_layer2_weights_reg[104]' [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:421]
+WARNING: [Synth 8-327] inferring latch for variable 'current_layer2_weights_reg[103]' [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:421]
+WARNING: [Synth 8-327] inferring latch for variable 'current_layer2_weights_reg[102]' [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:421]
+WARNING: [Synth 8-327] inferring latch for variable 'current_layer2_weights_reg[101]' [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:421]
+WARNING: [Synth 8-327] inferring latch for variable 'current_layer2_weights_reg[100]' [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:421]
+WARNING: [Synth 8-327] inferring latch for variable 'current_layer2_weights_reg[99]' [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:421]
+WARNING: [Synth 8-327] inferring latch for variable 'current_layer2_weights_reg[98]' [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:421]
+WARNING: [Synth 8-327] inferring latch for variable 'current_layer2_weights_reg[97]' [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:421]
+WARNING: [Synth 8-327] inferring latch for variable 'current_layer2_weights_reg[96]' [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:421]
+WARNING: [Synth 8-327] inferring latch for variable 'current_layer2_weights_reg[95]' [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:421]
+WARNING: [Synth 8-327] inferring latch for variable 'current_layer2_weights_reg[94]' [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:421]
+WARNING: [Synth 8-327] inferring latch for variable 'current_layer2_weights_reg[93]' [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:421]
+WARNING: [Synth 8-327] inferring latch for variable 'current_layer2_weights_reg[92]' [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:421]
+WARNING: [Synth 8-327] inferring latch for variable 'current_layer2_weights_reg[91]' [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:421]
+WARNING: [Synth 8-327] inferring latch for variable 'current_layer2_weights_reg[90]' [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:421]
+WARNING: [Synth 8-327] inferring latch for variable 'current_layer2_weights_reg[89]' [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:421]
+WARNING: [Synth 8-327] inferring latch for variable 'current_layer2_weights_reg[88]' [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:421]
+WARNING: [Synth 8-327] inferring latch for variable 'current_layer2_weights_reg[87]' [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:421]
+WARNING: [Synth 8-327] inferring latch for variable 'current_layer2_weights_reg[86]' [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:421]
+WARNING: [Synth 8-327] inferring latch for variable 'current_layer2_weights_reg[85]' [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:421]
+WARNING: [Synth 8-327] inferring latch for variable 'current_layer2_weights_reg[84]' [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:421]
+WARNING: [Synth 8-327] inferring latch for variable 'current_layer2_weights_reg[83]' [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:421]
+WARNING: [Synth 8-327] inferring latch for variable 'current_layer2_weights_reg[82]' [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:421]
+WARNING: [Synth 8-327] inferring latch for variable 'current_layer2_weights_reg[81]' [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:421]
+WARNING: [Synth 8-327] inferring latch for variable 'current_layer2_weights_reg[80]' [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:421]
+WARNING: [Synth 8-327] inferring latch for variable 'current_layer2_weights_reg[79]' [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:421]
+WARNING: [Synth 8-327] inferring latch for variable 'current_layer2_weights_reg[78]' [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:421]
+WARNING: [Synth 8-327] inferring latch for variable 'current_layer2_weights_reg[77]' [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:421]
+WARNING: [Synth 8-327] inferring latch for variable 'current_layer2_weights_reg[76]' [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:421]
+WARNING: [Synth 8-327] inferring latch for variable 'current_layer2_weights_reg[75]' [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:421]
+WARNING: [Synth 8-327] inferring latch for variable 'current_layer2_weights_reg[74]' [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:421]
+WARNING: [Synth 8-327] inferring latch for variable 'current_layer2_weights_reg[73]' [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:421]
+WARNING: [Synth 8-327] inferring latch for variable 'current_layer2_weights_reg[72]' [z:/ece554_final_project/workout_classifier/workout_classifier.gen/sources_1/bd/workout_classifier/ipshared/ddc3/src/mlp_classifier.sv:421]
+INFO: [Common 17-14] Message 'Synth 8-327' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    Idle |                               00 |                               00
+                   Waddr |                               01 |                               10
+                   Wdata |                               10 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_write_reg' using encoding 'sequential' in module 'mlp_controller_slave_lite_v1_0_S00_AXI'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    Idle |                               00 |                               00
+                   Raddr |                               01 |                               10
+                   Rdata |                               10 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_read_reg' using encoding 'sequential' in module 'mlp_controller_slave_lite_v1_0_S00_AXI'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:24 ; elapsed = 00:07:44 . Memory (MB): peak = 2232.797 ; gain = 672.168
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 360 (col length:72)
+BRAMs: 432 (col length: RAMB18 72 RAMB36 36)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6904] The RAM "\inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst /mlp_inst/layer2_outputs_reg" of size (depth=64 x width=21) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+INFO: [Synth 8-6904] The RAM "\inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst /mlp_inst/layer1_outputs_reg" of size (depth=128 x width=21) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+INFO: [Synth 8-12589] Found 13 bits of RAM  (\inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst /mlp_inst/i_12) with no load. RAM width may be reduced from 21 to 8 
+INFO: [Synth 8-6904] The RAM "\inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst /mlp_inst/layer2_outputs_reg" of size (depth=64 x width=8) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+INFO: [Synth 8-12589] Found 13 bits of RAM  (\inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst /mlp_inst/i_13) with no load. RAM width may be reduced from 21 to 8 
+INFO: [Synth 8-6904] The RAM "\inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst /mlp_inst/layer1_outputs_reg" of size (depth=128 x width=8) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:33 ; elapsed = 00:07:55 . Memory (MB): peak = 2232.797 ; gain = 672.168
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:41 ; elapsed = 00:08:04 . Memory (MB): peak = 2729.922 ; gain = 1169.293
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:41 ; elapsed = 00:08:04 . Memory (MB): peak = 2739.887 ; gain = 1179.258
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:42 ; elapsed = 00:08:05 . Memory (MB): peak = 2768.496 ; gain = 1207.867
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:45 ; elapsed = 00:08:08 . Memory (MB): peak = 2983.629 ; gain = 1423.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:45 ; elapsed = 00:08:08 . Memory (MB): peak = 2983.629 ; gain = 1423.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:45 ; elapsed = 00:08:09 . Memory (MB): peak = 2983.629 ; gain = 1423.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:45 ; elapsed = 00:08:09 . Memory (MB): peak = 2983.629 ; gain = 1423.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:45 ; elapsed = 00:08:09 . Memory (MB): peak = 2983.629 ; gain = 1423.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:45 ; elapsed = 00:08:09 . Memory (MB): peak = 2983.629 ; gain = 1423.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+DSP Final Report (the ' indicates corresponding REG is set)
++--------------------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name               | DSP Mapping | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++--------------------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|xbip_dsp48e2_wrapper_v3_0 | Dynamic     | -      | -      | -      | -      | 48     | -    | -    | -    | -    | -     | 1    | 1    | 
++--------------------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+----------------+------+
+|      |Cell            |Count |
++------+----------------+------+
+|1     |CARRY8          |    16|
+|2     |DSP_ALU         |     1|
+|3     |DSP_A_B_DATA    |     1|
+|4     |DSP_C_DATA      |     1|
+|5     |DSP_MULTIPLIER  |     1|
+|6     |DSP_M_DATA      |     1|
+|7     |DSP_OUTPUT      |     1|
+|8     |DSP_PREADD      |     1|
+|9     |DSP_PREADD_DATA |     1|
+|10    |LUT1            |    12|
+|11    |LUT2            |   137|
+|12    |LUT3            |    59|
+|13    |LUT4            |   210|
+|14    |LUT5            |   169|
+|15    |LUT6            |  1772|
+|16    |MUXF7           |   507|
+|17    |MUXF8           |   104|
+|18    |RAM64M8         |     3|
+|19    |RAM64X1D        |     3|
+|20    |RAMB18E2        |     1|
+|21    |RAMB36E2        |     3|
+|22    |FDRE            |  2333|
+|23    |LD              |  1910|
++------+----------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:45 ; elapsed = 00:08:10 . Memory (MB): peak = 2983.629 ; gain = 1423.000
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 239 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:29 ; elapsed = 00:07:59 . Memory (MB): peak = 2983.629 ; gain = 1367.930
+Synthesis Optimization Complete : Time (s): cpu = 00:00:45 ; elapsed = 00:08:10 . Memory (MB): peak = 2983.629 ; gain = 1423.000
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.043 . Memory (MB): peak = 2983.629 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 2544 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/weight_access/weights_and_biases/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_8SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/weight_access/weights_and_biases/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/prim_init.ram/DEVICE_8SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/weight_access/weights_and_biases/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/prim_init.ram/DEVICE_8SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/weight_access/weights_and_biases/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/prim_init.ram/DEVICE_8SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 2983.629 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1917 instances were transformed.
+  DSP48E2 => DSP48E2 (DSP_ALU, DSP_A_B_DATA, DSP_C_DATA, DSP_MULTIPLIER, DSP_M_DATA, DSP_OUTPUT, DSP_PREADD, DSP_PREADD_DATA): 1 instance 
+  LD => LDCE: 1910 instances
+  RAM64M8 => RAM64M8 (RAMD64E(x8)): 3 instances
+  RAM64X1D => RAM64X1D (RAMD64E(x2)): 3 instances
+
+Synth Design complete | Checksum: a1e0b28a
+INFO: [Common 17-83] Releasing license: Synthesis
+164 Infos, 200 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:52 ; elapsed = 00:08:25 . Memory (MB): peak = 2983.629 ; gain = 2389.184
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:02 . Memory (MB): peak = 2983.629 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'Z:/ece554_final_project/workout_classifier/workout_classifier.runs/workout_classifier_mlp_controller_0_2_synth_1/workout_classifier_mlp_controller_0_2.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:00 ; elapsed = 00:00:19 . Memory (MB): peak = 2983.629 ; gain = 0.000
+write_verilog: Time (s): cpu = 00:00:01 ; elapsed = 00:00:12 . Memory (MB): peak = 2983.629 ; gain = 0.000
+write_vhdl: Time (s): cpu = 00:00:02 ; elapsed = 00:00:13 . Memory (MB): peak = 2983.629 ; gain = 0.000
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP workout_classifier_mlp_controller_0_2, cache-ID = 1deb8165103f007f
+config_ip_cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:32 . Memory (MB): peak = 2983.629 ; gain = 0.000
+INFO: [Coretcl 2-1174] Renamed 31 cell refs.
+Write ShapeDB Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 2983.629 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'Z:/ece554_final_project/workout_classifier/workout_classifier.runs/workout_classifier_mlp_controller_0_2_synth_1/workout_classifier_mlp_controller_0_2.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:01 ; elapsed = 00:00:20 . Memory (MB): peak = 2983.629 ; gain = 0.000
+INFO: [Vivado 12-24828] Executing command : report_utilization -file workout_classifier_mlp_controller_0_2_utilization_synth.rpt -pb workout_classifier_mlp_controller_0_2_utilization_synth.pb
+write_verilog: Time (s): cpu = 00:00:01 ; elapsed = 00:00:14 . Memory (MB): peak = 2983.629 ; gain = 0.000
+write_vhdl: Time (s): cpu = 00:00:01 ; elapsed = 00:00:16 . Memory (MB): peak = 2983.629 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Mon Apr 20 20:34:52 2026...

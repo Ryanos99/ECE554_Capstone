@@ -1,0 +1,1227 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
+| Date         : Mon Apr 20 22:33:46 2026
+| Host         : Madis_ThinkPad running 64-bit major release  (build 9200)
+| Command      : report_drc -file workout_classifier_wrapper_drc_routed.rpt -pb workout_classifier_wrapper_drc_routed.pb -rpx workout_classifier_wrapper_drc_routed.rpx
+| Design       : workout_classifier_wrapper
+| Device       : xczu3eg-sfvc784-2-e
+| Speed File   : -2
+| Design State : Fully Routed
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Report DRC
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+           Ruledeck: default
+             Max checks: <unlimited>
+             Checks found: 238
++----------+----------+---------------------------------------------------------------------+--------+
+| Rule     | Severity | Description                                                         | Checks |
++----------+----------+---------------------------------------------------------------------+--------+
+| PDRC-153 | Warning  | Gated clock check                                                   | 237    |
+| AVAL-155 | Advisory | enum_AMULTSEL_BMULTSEL_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND | 1      |
++----------+----------+---------------------------------------------------------------------+--------+
+
+2. REPORT DETAILS
+-----------------
+PDRC-153#1 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/E[0] is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/pose_class_reg[1]_i_2/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/pose_class_reg[1]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#2 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/bias_sel_reg[7]_i_2_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/bias_sel_reg[7]_i_2/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/bias_sel_reg[7]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#3 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer1_bias_reg[7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer1_bias_reg[7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer1_bias_reg[7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#4 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer1_weights_reg[0][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer1_weights_reg[0][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer1_weights_reg[0][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#5 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer1_weights_reg[10][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer1_weights_reg[10][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer1_weights_reg[10][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#6 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer1_weights_reg[11][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer1_weights_reg[11][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer1_weights_reg[11][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#7 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer1_weights_reg[12][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer1_weights_reg[12][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer1_weights_reg[12][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#8 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer1_weights_reg[13][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer1_weights_reg[13][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer1_weights_reg[13][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#9 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer1_weights_reg[14][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer1_weights_reg[14][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer1_weights_reg[14][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#10 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer1_weights_reg[15][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer1_weights_reg[15][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer1_weights_reg[15][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#11 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer1_weights_reg[16][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer1_weights_reg[16][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer1_weights_reg[16][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#12 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer1_weights_reg[17][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer1_weights_reg[17][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer1_weights_reg[17][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#13 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer1_weights_reg[18][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer1_weights_reg[18][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer1_weights_reg[18][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#14 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer1_weights_reg[19][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer1_weights_reg[19][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer1_weights_reg[19][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#15 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer1_weights_reg[1][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer1_weights_reg[1][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer1_weights_reg[1][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#16 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer1_weights_reg[20][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer1_weights_reg[20][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer1_weights_reg[20][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#17 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer1_weights_reg[21][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer1_weights_reg[21][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer1_weights_reg[21][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#18 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer1_weights_reg[22][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer1_weights_reg[22][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer1_weights_reg[22][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#19 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer1_weights_reg[23][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer1_weights_reg[23][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer1_weights_reg[23][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#20 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer1_weights_reg[24][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer1_weights_reg[24][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer1_weights_reg[24][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#21 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer1_weights_reg[25][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer1_weights_reg[25][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer1_weights_reg[25][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#22 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer1_weights_reg[26][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer1_weights_reg[26][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer1_weights_reg[26][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#23 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer1_weights_reg[27][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer1_weights_reg[27][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer1_weights_reg[27][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#24 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer1_weights_reg[28][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer1_weights_reg[28][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer1_weights_reg[28][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#25 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer1_weights_reg[29][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer1_weights_reg[29][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer1_weights_reg[29][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#26 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer1_weights_reg[2][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer1_weights_reg[2][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer1_weights_reg[2][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#27 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer1_weights_reg[30][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer1_weights_reg[30][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer1_weights_reg[30][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#28 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer1_weights_reg[31][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer1_weights_reg[31][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer1_weights_reg[31][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#29 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer1_weights_reg[32][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer1_weights_reg[32][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer1_weights_reg[32][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#30 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer1_weights_reg[33][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer1_weights_reg[33][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer1_weights_reg[33][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#31 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer1_weights_reg[34][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer1_weights_reg[34][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer1_weights_reg[34][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#32 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer1_weights_reg[35][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer1_weights_reg[35][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer1_weights_reg[35][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#33 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer1_weights_reg[3][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer1_weights_reg[3][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer1_weights_reg[3][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#34 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer1_weights_reg[4][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer1_weights_reg[4][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer1_weights_reg[4][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#35 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer1_weights_reg[5][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer1_weights_reg[5][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer1_weights_reg[5][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#36 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer1_weights_reg[6][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer1_weights_reg[6][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer1_weights_reg[6][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#37 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer1_weights_reg[7][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer1_weights_reg[7][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer1_weights_reg[7][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#38 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer1_weights_reg[8][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer1_weights_reg[8][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer1_weights_reg[8][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#39 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer1_weights_reg[9][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer1_weights_reg[9][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer1_weights_reg[9][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#40 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_bias_reg[7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_bias_reg[7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_bias_reg[7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#41 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[0][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[0][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[0][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#42 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[100][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[100][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[100][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#43 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[101][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[101][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[101][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#44 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[102][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[102][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[102][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#45 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[103][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[103][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[103][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#46 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[104][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[104][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[104][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#47 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[105][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[105][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[105][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#48 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[106][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[106][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[106][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#49 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[107][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[107][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[107][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#50 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[108][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[108][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[108][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#51 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[109][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[109][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[109][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#52 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[10][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[10][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[10][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#53 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[110][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[110][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[110][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#54 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[111][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[111][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[111][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#55 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[112][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[112][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[112][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#56 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[113][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[113][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[113][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#57 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[114][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[114][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[114][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#58 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[115][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[115][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[115][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#59 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[116][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[116][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[116][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#60 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[117][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[117][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[117][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#61 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[118][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[118][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[118][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#62 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[119][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[119][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[119][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#63 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[11][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[11][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[11][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#64 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[120][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[120][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[120][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#65 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[121][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[121][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[121][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#66 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[122][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[122][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[122][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#67 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[123][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[123][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[123][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#68 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[124][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[124][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[124][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#69 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[125][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[125][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[125][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#70 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[126][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[126][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[126][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#71 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[127][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[127][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[127][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#72 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[12][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[12][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[12][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#73 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[13][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[13][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[13][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#74 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[14][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[14][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[14][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#75 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[15][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[15][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[15][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#76 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[16][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[16][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[16][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#77 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[17][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[17][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[17][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#78 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[18][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[18][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[18][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#79 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[19][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[19][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[19][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#80 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[1][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[1][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[1][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#81 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[20][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[20][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[20][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#82 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[21][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[21][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[21][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#83 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[22][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[22][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[22][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#84 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[23][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[23][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[23][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#85 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[24][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[24][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[24][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#86 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[25][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[25][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[25][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#87 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[26][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[26][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[26][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#88 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[27][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[27][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[27][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#89 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[28][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[28][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[28][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#90 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[29][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[29][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[29][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#91 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[2][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[2][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[2][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#92 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[30][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[30][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[30][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#93 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[31][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[31][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[31][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#94 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[32][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[32][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[32][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#95 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[33][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[33][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[33][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#96 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[34][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[34][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[34][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#97 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[35][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[35][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[35][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#98 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[36][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[36][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[36][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#99 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[37][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[37][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[37][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#100 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[38][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[38][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[38][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#101 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[39][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[39][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[39][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#102 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[3][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[3][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[3][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#103 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[40][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[40][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[40][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#104 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[41][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[41][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[41][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#105 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[42][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[42][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[42][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#106 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[43][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[43][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[43][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#107 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[44][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[44][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[44][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#108 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[45][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[45][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[45][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#109 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[46][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[46][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[46][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#110 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[47][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[47][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[47][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#111 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[48][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[48][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[48][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#112 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[49][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[49][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[49][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#113 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[4][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[4][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[4][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#114 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[50][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[50][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[50][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#115 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[51][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[51][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[51][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#116 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[52][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[52][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[52][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#117 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[53][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[53][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[53][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#118 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[54][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[54][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[54][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#119 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[55][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[55][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[55][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#120 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[56][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[56][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[56][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#121 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[57][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[57][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[57][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#122 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[58][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[58][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[58][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#123 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[59][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[59][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[59][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#124 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[5][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[5][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[5][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#125 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[60][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[60][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[60][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#126 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[61][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[61][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[61][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#127 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[62][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[62][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[62][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#128 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[63][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[63][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[63][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#129 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[64][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[64][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[64][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#130 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[65][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[65][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[65][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#131 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[66][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[66][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[66][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#132 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[67][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[67][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[67][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#133 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[68][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[68][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[68][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#134 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[69][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[69][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[69][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#135 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[6][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[6][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[6][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#136 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[70][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[70][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[70][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#137 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[71][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[71][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[71][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#138 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[72][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[72][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[72][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#139 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[73][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[73][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[73][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#140 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[74][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[74][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[74][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#141 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[75][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[75][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[75][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#142 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[76][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[76][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[76][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#143 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[77][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[77][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[77][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#144 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[78][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[78][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[78][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#145 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[79][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[79][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[79][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#146 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[7][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[7][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[7][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#147 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[80][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[80][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[80][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#148 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[81][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[81][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[81][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#149 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[82][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[82][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[82][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#150 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[83][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[83][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[83][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#151 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[84][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[84][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[84][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#152 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[85][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[85][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[85][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#153 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[86][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[86][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[86][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#154 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[87][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[87][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[87][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#155 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[88][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[88][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[88][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#156 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[89][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[89][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[89][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#157 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[8][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[8][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[8][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#158 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[90][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[90][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[90][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#159 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[91][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[91][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[91][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#160 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[92][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[92][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[92][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#161 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[93][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[93][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[93][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#162 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[94][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[94][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[94][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#163 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[95][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[95][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[95][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#164 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[96][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[96][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[96][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#165 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[97][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[97][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[97][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#166 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[98][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[98][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[98][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#167 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[99][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[99][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[99][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#168 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[9][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[9][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_layer2_weights_reg[9][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#169 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_bias_reg[7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_bias_reg[7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_bias_reg[7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#170 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[0][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[0][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[0][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#171 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[10][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[10][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[10][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#172 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[11][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[11][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[11][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#173 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[12][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[12][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[12][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#174 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[13][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[13][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[13][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#175 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[14][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[14][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[14][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#176 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[15][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[15][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[15][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#177 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[16][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[16][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[16][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#178 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[17][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[17][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[17][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#179 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[18][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[18][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[18][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#180 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[19][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[19][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[19][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#181 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[1][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[1][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[1][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#182 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[20][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[20][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[20][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#183 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[21][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[21][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[21][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#184 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[22][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[22][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[22][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#185 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[23][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[23][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[23][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#186 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[24][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[24][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[24][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#187 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[25][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[25][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[25][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#188 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[26][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[26][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[26][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#189 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[27][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[27][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[27][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#190 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[28][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[28][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[28][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#191 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[29][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[29][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[29][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#192 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[2][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[2][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[2][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#193 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[30][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[30][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[30][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#194 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[31][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[31][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[31][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#195 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[32][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[32][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[32][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#196 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[33][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[33][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[33][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#197 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[34][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[34][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[34][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#198 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[35][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[35][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[35][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#199 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[36][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[36][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[36][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#200 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[37][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[37][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[37][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#201 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[38][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[38][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[38][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#202 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[39][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[39][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[39][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#203 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[3][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[3][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[3][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#204 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[40][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[40][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[40][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#205 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[41][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[41][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[41][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#206 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[42][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[42][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[42][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#207 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[43][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[43][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[43][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#208 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[44][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[44][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[44][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#209 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[45][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[45][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[45][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#210 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[46][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[46][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[46][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#211 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[47][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[47][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[47][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#212 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[48][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[48][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[48][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#213 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[49][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[49][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[49][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#214 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[4][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[4][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[4][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#215 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[50][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[50][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[50][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#216 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[51][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[51][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[51][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#217 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[52][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[52][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[52][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#218 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[53][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[53][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[53][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#219 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[54][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[54][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[54][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#220 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[55][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[55][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[55][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#221 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[56][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[56][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[56][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#222 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[57][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[57][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[57][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#223 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[58][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[58][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[58][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#224 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[59][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[59][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[59][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#225 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[5][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[5][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[5][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#226 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[60][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[60][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[60][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#227 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[61][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[61][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[61][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#228 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[62][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[62][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[62][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#229 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[63][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[63][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[63][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#230 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[6][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[6][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[6][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#231 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[7][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[7][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[7][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#232 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[8][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[8][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[8][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#233 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[9][7]_i_1_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[9][7]_i_1/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/current_output_layer_weights_reg[9][7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#234 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/input_num__0[0] is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/neuron_reg[6]_i_2/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/neuron_reg[6]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#235 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/layer_sel_reg[1]_i_2_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/layer_sel_reg[1]_i_2/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/layer_sel_reg[1]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#236 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/mac_unit/E[0] is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/mac_unit/weight_reg[7]_i_2/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/mac_unit/weight_reg[7]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#237 Warning
+Gated clock check  
+Net workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/point_reg[7]_i_2_n_0 is a gated clock net sourced by a combinational pin workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/point_reg[7]_i_2/O, cell workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/point_reg[7]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+AVAL-155#1 Advisory
+enum_AMULTSEL_BMULTSEL_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
+workout_classifier_i/mlp_controller_0/inst/mlp_controller_slave_lite_v1_0_S00_AXI_inst/mlp_inst/mac_unit/mac/U0/i_synth/i_synth_option.i_synth_model/opt_8series.i_uniwrap/i_primitive: DSP48E2 is not using the D port (AMULTSEL = A and BMULTSEL = B). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+Related violations: <none>
+
+
