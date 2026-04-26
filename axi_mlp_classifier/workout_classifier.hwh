@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Apr 22 17:31:55 2026" VIVADOVERSION="2025.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Fri Apr 24 15:28:07 2026" VIVADOVERSION="2025.2">
 
   <SYSTEMINFO ARCH="zynquplus" DEVICE="xczu3eg" NAME="workout_classifier" PACKAGE="sfvc784" SPEEDGRADE="-2"/>
 
@@ -457,7 +457,7 @@
         </BUSINTERFACE>
       </BUSINTERFACES>
     </MODULE>
-    <MODULE COREREVISION="13" FULLNAME="/mlp_controller_0" HWVERSION="1.0" INSTANCE="mlp_controller_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="mlp_controller" VLNV="xilinx.com:user:mlp_controller:1.0">
+    <MODULE COREREVISION="14" FULLNAME="/mlp_controller_0" HWVERSION="1.0" INSTANCE="mlp_controller_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="mlp_controller" VLNV="xilinx.com:user:mlp_controller:1.0">
       <DOCUMENTS/>
       <ADDRESSBLOCKS>
         <ADDRESSBLOCK ACCESS="" INTERFACE="S00_AXI" NAME="S00_AXI_reg" RANGE="4096" USAGE="register"/>
@@ -465,7 +465,7 @@
       <PARAMETERS>
         <PARAMETER NAME="C_S00_AXI_ADDR_WIDTH" VALUE="8"/>
         <PARAMETER NAME="C_S00_AXI_DATA_WIDTH" VALUE="32"/>
-        <PARAMETER NAME="Component_Name" VALUE="workout_classifier_mlp_controller_0_10"/>
+        <PARAMETER NAME="Component_Name" VALUE="workout_classifier_mlp_controller_0_11"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
         <PARAMETER NAME="C_S00_AXI_BASEADDR" VALUE="0x80000000"/>
         <PARAMETER NAME="C_S00_AXI_HIGHADDR" VALUE="0x8000FFFF"/>
