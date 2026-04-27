@@ -25,7 +25,7 @@ module mlp_classifier(
         input  logic             rst_n,
         input  logic [271:0]     movenet_data,         // Movenet points
         input  logic             movenet_data_valid,   // Movenet points valid
-        output logic [1:0]       pose_class,           // 00: Push-Up, 01: Squat, 10: Curl, 11: No pose
+        output logic [1:0]       pose_class,           // 00: Push-Up, 01: Squat, 10: Bench, 11: No pose
         output logic             done_pulse  // High when inference finishes
     );
 
@@ -210,7 +210,6 @@ module mlp_classifier(
                                                                                                                                                                        : pose_class_outputs[output_layer_neuron_count];
     end
 
-    //FIXME: is movenet_data stable the whole time or should we capture it when movenet_data_valid?
     always_comb begin
         next_state = state;
         done_pulse = 1'b0;
@@ -293,7 +292,7 @@ module mlp_classifier(
                     8'd7: begin 
                         point    = movenet_data[63:56];
                     end
-                    8'd83: begin 
+                    8'd8: begin 
                         point    = movenet_data[71:64];
                     end
                     8'd9: begin 
