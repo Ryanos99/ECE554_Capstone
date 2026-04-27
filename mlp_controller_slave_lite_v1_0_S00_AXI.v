@@ -954,28 +954,29 @@
 	  	  	movenet_data_valid <= 0;
 	end
 
-	//Need to hold the done pulse until its read
-	reg [1:0] done_pulse_count;
 
 	always @(posedge S_AXI_ACLK) begin
   		if (!S_AXI_ARESETN) begin
-			done_pulse_count <= 2'd0;
   		  	slv_reg36 <= 32'd0;
-			slv_reg37 <= 32'd0;
+			slv_reg37 <= 32'd3;
   		end else if (done_pulse) begin
-  		  	slv_reg36 <= 32'd1;
+  		  	slv_reg36 <= done_pulse;
   		  	slv_reg37 <= pose_class; 
 		// PS needs to write to done pulse reg to clear it otherwise we dont know how long to hold it
 		end else if (axi_wready && S_AXI_WVALID && axi_awready && S_AXI_AWVALID &&
                      axi_awaddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB] == 6'h24) begin
 			slv_reg36 <= 32'd0;
 			slv_reg37 <= slv_reg37;
+		end else begin
+			slv_reg36 <= slv_reg36;
+  		  	slv_reg37 <= slv_reg37;
 		end
 	end
 
 	mlp_classifier mlp_inst(.clk(S_AXI_ACLK), .rst_n(S_AXI_ARESETN), 
 						  	.movenet_data(movenet_data), .movenet_data_valid(movenet_data_valid),
 						  	.done_pulse(done_pulse), .pose_class(pose_class));
+
 	// User logic ends
 
 	endmodule

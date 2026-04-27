@@ -86,8 +86,8 @@ module mlp_classifier(
     logic [7:0] output_layer_input_count;       // 64 inputs
 
     // Layer outputs
-    logic [20:0] layer1_outputs     [127:0];
-    logic [20:0] layer2_outputs     [63:0];
+    logic [7:0] layer1_outputs     [127:0];
+    logic [7:0] layer2_outputs     [63:0];
     logic [20:0] pose_class_outputs [2:0];
 
     // Intermediate signals to store into larger outputs
@@ -148,10 +148,10 @@ module mlp_classifier(
 
     // Flop the mac out to the final output signal
     always_ff @(posedge clk) begin
-        layer1_outputs[layer1_neuron_count] <= (~rst_n | (state == IDLE)) ? 21'd0
-                                                                          : (layer1_input_count == 7'd33) & valid_mac_out & (state == LAYER1_WAIT_MAC) ? (acc_out > 0) ? acc_out
-                                                                                                                                                                       : 21'd0
-                                                                                                                                                       : layer1_outputs[layer1_neuron_count];
+        layer1_outputs[layer1_neuron_count] <= (~rst_n | (state == IDLE)) ? 8'd0
+            : (layer1_input_count == 7'd33) & valid_mac_out & (state == LAYER1_WAIT_MAC) 
+                ? (acc_out > 0) ? acc_out[16:9] : 8'd0
+                : layer1_outputs[layer1_neuron_count];
     end
 
 
@@ -176,10 +176,10 @@ module mlp_classifier(
 
     // Flop the mac out to the final output signal
     always_ff @(posedge clk) begin
-        layer2_outputs[layer2_neuron_count] <= (~rst_n | (state == IDLE)) ? 21'd0
-                                                                          : (layer2_input_count == 7'd127) & valid_mac_out & (state == LAYER2_WAIT_MAC) ? (acc_out > 0) ? acc_out
-                                                                                                                                                                        : 21'd0
-                                                                                                                                                        : layer2_outputs[layer2_neuron_count];
+        layer2_outputs[layer2_neuron_count] <= (~rst_n | (state == IDLE)) ? 8'd0
+            : (layer2_input_count == 7'd127) & valid_mac_out & (state == LAYER2_WAIT_MAC)
+                ? (acc_out > 0) ? acc_out[16:9] : 8'd0
+                : layer2_outputs[layer2_neuron_count];
     end
 
 
@@ -208,6 +208,16 @@ module mlp_classifier(
                                                                                     : (output_layer_input_count == 7'd63) & valid_mac_out & (state == OUTPUT_WAIT_MAC) ? (acc_out > 0) ? acc_out
                                                                                                                                                                                        : 21'd0
                                                                                                                                                                        : pose_class_outputs[output_layer_neuron_count];
+    end
+
+    always_ff @(posedge clk) begin
+        if (~rst_n)
+            pose_class <= 2'b11;
+        else if (state == DONE)
+            pose_class <= (pose_class_outputs[0] > pose_class_outputs[1]) & (pose_class_outputs[0] > pose_class_outputs[2]) ? 2'b00
+                        : (pose_class_outputs[1] > pose_class_outputs[0]) & (pose_class_outputs[1] > pose_class_outputs[2]) ? 2'b01
+                        : (pose_class_outputs[2] > pose_class_outputs[0]) & (pose_class_outputs[2] > pose_class_outputs[1]) ? 2'b10
+                        : 2'b11;
     end
 
     always_comb begin
@@ -488,11 +498,6 @@ module mlp_classifier(
 
             DONE: begin
                 done_pulse = 1'b1;
-                pose_class = (pose_class_outputs[0] > pose_class_outputs[1]) & (pose_class_outputs[0] > pose_class_outputs[2]) ? 2'b00
-                                                                                                                               : (pose_class_outputs[1] > pose_class_outputs[0]) & (pose_class_outputs[1] > pose_class_outputs[2]) ? 2'b01
-                                                                                                                                                                                                                                   : (pose_class_outputs[2] > pose_class_outputs[0]) & (pose_class_outputs[2] > pose_class_outputs[1]) ? 2'b10
-                                                                                                                                                                                                                                                                                                                                       : 2'b11;
-
                 // Reset counters
                 rst_layer1_input_cnt = 1'b0;
                 rst_layer1_neuron_cnt = 1'b0;

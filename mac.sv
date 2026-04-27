@@ -40,8 +40,8 @@ module mac(
     logic       valid_mac_inputs_3;
     logic       valid_mac_inputs_4;
 
-    assign valid_point  = valid_mac_inputs ? point : 8'd0;
-    assign valid_weight = valid_mac_inputs ? weight : 8'd0;
+    assign valid_point  = valid_mac_inputs ? {point} : 8'd0;
+    assign valid_weight = valid_mac_inputs ? {weight} : 8'd0;
 
 
     always_ff @(posedge clk) begin
