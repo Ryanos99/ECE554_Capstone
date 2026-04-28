@@ -21,6 +21,7 @@ import cv2
 import numpy as np
 import time
 import joblib
+import sys
 
 # ── PYNQ imports ──────────────────────────────────────────────────────────────
 try:
@@ -61,6 +62,10 @@ REG_EXERCISE      = 0x94
 
 # INT8 scale factor — maps StandardScaler output (~[-3,+3]) to [-127,+127]
 INT8_SCALE = 42.0
+
+# Debounce time (ms)
+DEBOUNCE_TIME = 0
+NUM_BUTTONS = 4
 
 # MoveNet skeleton edges
 EDGES = [
@@ -149,29 +154,33 @@ class Stats:
         self.exercise_cnts = exercise_to_set
 
     def to_string(self):
-        parts = [f"{v} reps in {CLASS_NAMES.get(int(k), 'unknown')}"
+        parts = [f"{v}"
                  for k, v in self.exercise_cnts.items()]
-        return f"{self.name}: " + ", ".join(parts)
+        return f"{self.name}: " + "{" + ", ".join(parts) + "}"
 
     def copy(self):
+        global player_num
         a_copy = Stats(self.name)
         a_copy.set_exercise_cnts(self.exercise_cnts.copy())
+        player_num -= 1
         return a_copy
 
 # ── Display ───────────────────────────────────────────────────────────────────
-def draw_display(frame, keypoints, exercise, reps, state, fps, current_stat, prev_stats, ex_max):
+def draw_display(frame, keypoints, exercise, reps, state, fps, current_stat, 
+                         prev_stats, ex_max, skeleton=True, is_recording=False):
     h, w = frame.shape[:2]
 
     # Skeleton
-    for a, b in EDGES:
-        if keypoints[a,2] > CONF_THRESHOLD and keypoints[b,2] > CONF_THRESHOLD:
-            cv2.line(frame,
-                     (int(keypoints[a,1]*w), int(keypoints[a,0]*h)),
-                     (int(keypoints[b,1]*w), int(keypoints[b,0]*h)),
-                     (0,255,0), 2)
-    for k in keypoints:
-        if k[2] > CONF_THRESHOLD:
-            cv2.circle(frame, (int(k[1]*w), int(k[0]*h)), 4, (0,255,255), -1)
+    if skeleton:
+        for a, b in EDGES:
+            if keypoints[a,2] > CONF_THRESHOLD and keypoints[b,2] > CONF_THRESHOLD:
+                cv2.line(frame,
+                         (int(keypoints[a,1]*w), int(keypoints[a,0]*h)),
+                         (int(keypoints[b,1]*w), int(keypoints[b,0]*h)),
+                         (0,255,0), 2)
+        for k in keypoints:
+            if k[2] > CONF_THRESHOLD:
+                cv2.circle(frame, (int(k[1]*w), int(k[0]*h)), 4, (0,255,255), -1)
 
     # Top info panel
     cv2.rectangle(frame, (0,0), (300,160), (0,0,0), -1)
@@ -183,7 +192,6 @@ def draw_display(frame, keypoints, exercise, reps, state, fps, current_stat, pre
                 (10,120), cv2.FONT_HERSHEY_SIMPLEX, 0.6, (200,200,200), 1)
     cv2.putText(frame, f"FPS: {fps:.1f}",
                 (10,145), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (150,150,150), 1)
-
     # Bottom stats panel
     ix, iy, xsz, ysz = 0, 160, 300, 320
     cv2.rectangle(frame, (ix, iy), (ix+xsz, iy+ysz), (0,0,0), -1)
@@ -195,11 +203,18 @@ def draw_display(frame, keypoints, exercise, reps, state, fps, current_stat, pre
         best  = f"{ex_max[i][0]}: {ex_max[i][1]}" if ex_max[i] is not None else "N/A"
         cv2.putText(frame, f"Best {label}: {best}",
                     (ix+10, iy+(i+2)*40), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255,255,255), 1)
+        
+    if is_recording:
+        cv2.putText(frame, f"RECORDING",
+                (ix+10,iy+(len(ex_max)+2)*40), cv2.FONT_HERSHEY_SIMPLEX, 1.0, (0, 0, 255), 2)
 
     return frame
 
+def get_time_ms():
+    return time.time_ns() // 1_000_000
+
 # ── Main ──────────────────────────────────────────────────────────────────────
-def main():
+def main():    
     global previous_stats, exercise_max, player_num
 
     interpreter = load_movenet()
@@ -212,8 +227,35 @@ def main():
         gpio = overlay.axi_gpio_0
         buttons = gpio.channel1
 
-        def get_button(i):
-            return (buttons.read() >> i) & 1
+        # Code taken from https://digilent.com/reference/learn/microprocessor/tutorials/debouncing-via-software/start?srsltid=AfmBOopyAjinABd9VAqmMSGY8QmHhWQSOWYKDYIcPH9McAYU_J87vzom
+        from enum import Enum
+
+        global DEBOUNCE_TIME, NUM_BUTTONS
+
+        class Button(Enum):
+            LOW = 0
+            HIGH = 1
+
+        currentBtnState = [Button.LOW] * NUM_BUTTONS
+        prevBtnState = [Button.LOW] * NUM_BUTTONS
+        currentActiveState = [Button.LOW] * NUM_BUTTONS
+        prevActiveState = [Button.LOW] * NUM_BUTTONS
+
+        lastDebounceTime = [get_time_ms()] * NUM_BUTTONS
+
+        def get_button(num):
+            i = 3 - num
+            currentBtnState[i] = Button.HIGH if ((buttons.read() >> i) & 1 == 1) else Button.LOW
+            if (currentBtnState[i] != prevBtnState[i]):
+                lastDebounceTime[i] = get_time_ms()
+            if (get_time_ms() - lastDebounceTime[i]) > DEBOUNCE_TIME:
+                currentActiveState[i] = currentBtnState[i]
+            temp_return = (prevActiveState[i] == Button.LOW and currentActiveState[i] == Button.HIGH)
+            prevBtnState[i] = currentBtnState[i]
+            prevActiveState[i] = currentActiveState[i]
+            if temp_return:
+                print(f"Button {num} pressed")
+            return temp_return
     
         displayport = DisplayPort()
         displayport.configure(VideoMode(1920, 1080, 24), PIXEL_RGB)
@@ -223,6 +265,7 @@ def main():
     counter     = RepCounter()
     currentStat = Stats()
     is_recording = False
+    skeleton = True
 
     cap = cv2.VideoCapture(CAMERA_INDEX)
     time.sleep(1.0)
@@ -270,11 +313,11 @@ def main():
 
             # Draw
             frame = draw_display(frame, keypoints, exercise, reps, state, fps,
-                                 currentStat, previous_stats, exercise_max)
+                                 currentStat, previous_stats, exercise_max, skeleton, is_recording)
 
             if BOARD:
                 dp_frame = displayport.newframe()
-                dp_frame[:] = cv2.cvtColor(cv2.resize(frame, (1920,1080)), cv2.COLOR_BGR2RGB)
+                dp_frame[:] = cv2.resize(frame, (1920,1080))
                 displayport.writeframe(dp_frame)
 
                 # Button 0 — reset current player
@@ -290,7 +333,6 @@ def main():
                     if not is_recording:
                         is_recording = True
                         counter.reset()
-                        time.sleep(0.2)
                     else:
                         previous_stats.append(currentStat.copy())
                         for i in range(len(exercise_max)):
@@ -303,17 +345,14 @@ def main():
 
                 # Button 2 — exit
                 if get_button(2):
-                    print("Final stats:")
-                    for s in previous_stats:
-                        print(s.to_string())
-                    break
+                    skeleton = not(skeleton)
 
                 # Button 3 — global reset
                 if get_button(3):
                     previous_stats = []
+                    player_num     = 1
                     currentStat    = Stats()
                     exercise_max   = [None] * len(exercise_init)
-                    player_num     = 1
                     counter.reset()
 
             else:

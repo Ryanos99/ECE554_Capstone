@@ -62,6 +62,10 @@ REG_EXERCISE      = 0x94
 # INT8 scale factor — maps StandardScaler output (~[-3,+3]) to [-127,+127]
 INT8_SCALE = 42.0
 
+# Debounce time (ms)
+DEBOUNCE_TIME = 50
+NUM_BUTTONS = 4
+
 # MoveNet skeleton edges
 EDGES = [
     (0,1),(0,2),(1,3),(2,4),
@@ -159,7 +163,7 @@ class Stats:
         return a_copy
 
 # ── Display ───────────────────────────────────────────────────────────────────
-def draw_display(frame, keypoints, exercise, reps, state, fps, current_stat, prev_stats, ex_max):
+def draw_display(frame, keypoints, exercise, reps, state, fps, current_stat, prev_stats, ex_max, is_recording=False):
     h, w = frame.shape[:2]
 
     # Skeleton
@@ -183,7 +187,9 @@ def draw_display(frame, keypoints, exercise, reps, state, fps, current_stat, pre
                 (10,120), cv2.FONT_HERSHEY_SIMPLEX, 0.6, (200,200,200), 1)
     cv2.putText(frame, f"FPS: {fps:.1f}",
                 (10,145), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (150,150,150), 1)
-
+    if is_recording:
+        cv2.putText(frame, f"RECORDING",
+                (10,160), cv2.FONT_HERSHEY_SIMPLEX, 1.0, (0,255,0), 2)
     # Bottom stats panel
     ix, iy, xsz, ysz = 0, 160, 300, 320
     cv2.rectangle(frame, (ix, iy), (ix+xsz, iy+ysz), (0,0,0), -1)
@@ -197,6 +203,9 @@ def draw_display(frame, keypoints, exercise, reps, state, fps, current_stat, pre
                     (ix+10, iy+(i+2)*40), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255,255,255), 1)
 
     return frame
+
+def get_time_ms():
+    return time.time_ns() // 1_000_000
 
 # ── Main ──────────────────────────────────────────────────────────────────────
 def main():
@@ -212,8 +221,33 @@ def main():
         gpio = overlay.axi_gpio_0
         buttons = gpio.channel1
 
+        # Code taken from https://digilent.com/reference/learn/microprocessor/tutorials/debouncing-via-software/start?srsltid=AfmBOopyAjinABd9VAqmMSGY8QmHhWQSOWYKDYIcPH9McAYU_J87vzom
+        from enum import Enum
+
+        global DEBOUNCE_TIME, NUM_BUTTONS
+
+        class Button(Enum):
+            LOW = 0
+            HIGH = 1
+
+        currentBtnState = [Button.LOW] * NUM_BUTTONS
+        prevBtnState = [Button.LOW] * NUM_BUTTONS
+        currentActiveState = [Button.LOW] * NUM_BUTTONS
+        prevActiveState = [Button.LOW] * NUM_BUTTONS
+
+        lastDebounceTime = [get_time_ms()] * NUM_BUTTONS
+
         def get_button(i):
-            return (buttons.read() >> i) & 1
+
+            currentBtnState[i] = Button.HIGH if ((buttons.read() >> i) & 1 == 1) else Button.LOW
+            if (currentBtnState[i] != prevBtnState[i]):
+                lastDebounceTime[i] = get_time_ms()
+            if (get_time_ms() - lastDebounceTime[i]) > DEBOUNCE_TIME:
+                currentActiveState[i] = currentBtnState[i]
+            temp_return = (prevActiveState[i] == Button.LOW and currentActiveState[i] == Button.HIGH)
+            prevBtnState[i] = currentBtnState[i]
+            prevActiveState[i] = currentActiveState[i]
+            return temp_return
     
         displayport = DisplayPort()
         displayport.configure(VideoMode(1920, 1080, 24), PIXEL_RGB)
@@ -270,7 +304,7 @@ def main():
 
             # Draw
             frame = draw_display(frame, keypoints, exercise, reps, state, fps,
-                                 currentStat, previous_stats, exercise_max)
+                                 currentStat, previous_stats, exercise_max, is_recording)
 
             if BOARD:
                 dp_frame = displayport.newframe()
@@ -290,7 +324,6 @@ def main():
                     if not is_recording:
                         is_recording = True
                         counter.reset()
-                        time.sleep(0.2)
                     else:
                         previous_stats.append(currentStat.copy())
                         for i in range(len(exercise_max)):
